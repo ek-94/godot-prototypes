@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://drlkq8ql1rrq7"]
+[gd_scene load_steps=4 format=3 uid="uid://drlkq8ql1rrq7"]
 
 [ext_resource type="PackedScene" uid="uid://bqag7exiduj3" path="res://scenes/player.tscn" id="1_nnsk1"]
 [ext_resource type="PackedScene" uid="uid://do6nu8i7iirbc" path="res://scenes/mushroom.tscn" id="2_rwgxs"]
+[ext_resource type="PackedScene" uid="uid://c2u2i2kwgvuit" path="res://scenes/orb.tscn" id="3_4wyf3"]
 
 [node name="world" type="Node2D"]
 
@@ -13,3 +14,6 @@ position = Vector2(191, 76)
 
 [node name="mushroom2" parent="." instance=ExtResource("2_rwgxs")]
 position = Vector2(310, 80)
+
+[node name="orb" parent="." instance=ExtResource("3_4wyf3")]
+position = Vector2(384, 272)

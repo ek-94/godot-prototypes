@@ -1,6 +1,6 @@
 extends Node
 
-func display_number(value: int, position: Vector2, bool = false):
+func display_number(value: int, position: Vector2):
 	var number = Label.new()
 	number.global_position.x = position.x + randf_range(-10, 10)
 	number.global_position.y = position.y
