@@ -15,6 +15,10 @@ run/main_scene="uid://drlkq8ql1rrq7"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+DamageNumbers="*res://scripts/damage_numbers.gd"
+
 [input]
 
 up={

@@ -73,3 +73,5 @@ shape = SubResource("RectangleShape2D_6c3h1")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_0rtbm")
 autoplay = "default"
+
+[node name="dmg_num_origin" type="Node2D" parent="."]

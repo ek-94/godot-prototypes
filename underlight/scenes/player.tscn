@@ -72,4 +72,4 @@ autoplay = "walk"
 [node name="Camera2D" type="Camera2D" parent="."]
 position_smoothing_enabled = true
 script = ExtResource("3_qhqgy")
-zoom_in = Vector2(3, 3)
+zoom_in = 1.0
