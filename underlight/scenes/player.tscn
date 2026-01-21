@@ -1,8 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://bqag7exiduj3"]
+[gd_scene load_steps=11 format=3 uid="uid://bqag7exiduj3"]
 
 [ext_resource type="Texture2D" uid="uid://dl7wc50rnd44k" path="res://sprites/player/walk.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://byno4m8db8ms5" path="res://scenes/player.gd" id="1_g2els"]
-[ext_resource type="Script" uid="uid://dbqwmdogfnok3" path="res://scenes/camera_2d.gd" id="3_qhqgy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
 size = Vector2(21, 32)
@@ -68,8 +67,3 @@ shape = SubResource("RectangleShape2D_g2els")
 sprite_frames = SubResource("SpriteFrames_ur7pv")
 animation = &"walk"
 autoplay = "walk"
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position_smoothing_enabled = true
-script = ExtResource("3_qhqgy")
-zoom_in = 1.0

@@ -8,7 +8,7 @@ func display_number(value: int, position: Vector2):
 	number.z_index = 5
 	number.label_settings = LabelSettings.new()
 	
-	var color = "#FFF"
+	var color = Color.RED
 	
 	if value == 0:
 		color = "#BB2"

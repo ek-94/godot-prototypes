@@ -1,7 +1,8 @@
 extends Area2D
 
 @export var speed := 200.0
-@export var damage := 10
+@export var min_damage := 20	
+@export var max_damage := 70
 
 var target: Node2D
 var last_target: Node2D
@@ -16,17 +17,22 @@ func _physics_process(delta):
 	
 func find_target() -> Node2D:
 	var enemies = get_tree().get_nodes_in_group("enemies")
+	print(enemies)
+	
 	if enemies.is_empty():
 		return null
 	
-	print(last_target)
 	if last_target != null:
 		enemies.erase(last_target)
+		if enemies.is_empty():
+			return null
 		
+
 	var closest = enemies[0]
 	var closest_dist := global_position.distance_squared_to(closest.global_position)
 	
 	for enemy in enemies:
+		print(enemy)
 		if enemy != null:
 			var d = global_position.distance_squared_to(enemy.global_position)
 			if d < closest_dist:
@@ -38,7 +44,11 @@ func find_target() -> Node2D:
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("enemies"):
 		if body.has_method("take_damage"):
-			body.take_damage(20)
+			var damage = randi_range(min_damage, max_damage)
+			body.take_damage(damage)
 			last_target = body
 			target = find_target()
-			dir = (target.global_position - global_position).normalized()
+			if target == null:
+				dir *= -1
+			else:
+				dir = (target.global_position - global_position).normalized()

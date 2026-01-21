@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dkq64kh4wmp34" path="res://img/magic03orb.png" id="2_g6cbt"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vnh3v"]
-radius = 2.0
+radius = 1.0
 
 [node name="orb" type="Area2D"]
 script = ExtResource("1_ubfm6")
