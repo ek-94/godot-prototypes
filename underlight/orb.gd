@@ -1,23 +1,23 @@
 extends Area2D
 
 @export var speed := 200.0
-@export var min_damage := 20	
-@export var max_damage := 70
+@export var min_damage := 1	
+@export var max_damage := 2
 
 var target: Node2D
 var last_target: Node2D
-var dir
+var dir = Vector2(1,1)
 
 func _ready():
 	target = find_target()
-	dir = (target.global_position - global_position).normalized()
+	if target != null:
+		dir = (target.global_position - global_position).normalized()
 
 func _physics_process(delta):
 	global_position += dir * speed * delta
 	
 func find_target() -> Node2D:
 	var enemies = get_tree().get_nodes_in_group("enemies")
-	print(enemies)
 	
 	if enemies.is_empty():
 		return null
@@ -28,18 +28,17 @@ func find_target() -> Node2D:
 			return null
 		
 
-	var closest = enemies[0]
-	var closest_dist := global_position.distance_squared_to(closest.global_position)
+	#var closest = enemies[0]
+	#var closest_dist := global_position.distance_squared_to(closest.global_position)
+	#
+	#for enemy in enemies:
+		#if enemy != null:
+			#var d = global_position.distance_squared_to(enemy.global_position)
+			#if d < closest_dist:
+				#closest = enemy
+				#closest_dist = d
 	
-	for enemy in enemies:
-		print(enemy)
-		if enemy != null:
-			var d = global_position.distance_squared_to(enemy.global_position)
-			if d < closest_dist:
-				closest = enemy
-				closest_dist = d
-	
-	return closest
+	return enemies.pick_random()
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("enemies"):
