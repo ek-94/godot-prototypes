@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://buuoqq0neool"]
+
+[ext_resource type="PackedScene" uid="uid://bdq6ajic6fjrf" path="res://assets/models/mixamo_base.glb" id="1_3vyb7"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g2els"]
+radius = 0.40625
+height = 1.8056641
+
+[node name="Player" type="CharacterBody3D" unique_id=728067684]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1576032204]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.90283203, 0)
+shape = SubResource("CapsuleShape3D_g2els")
+
+[node name="visuals" type="Node3D" parent="." unique_id=1466704831]
+
+[node name="mixamo_base" parent="visuals" unique_id=346314374 instance=ExtResource("1_3vyb7")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="camera_mount" type="Node3D" parent="." unique_id=673874752]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3000001, 0)
+
+[node name="Camera3D" type="Camera3D" parent="camera_mount" unique_id=83306792]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6999999, 2.2)

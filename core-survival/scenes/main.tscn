@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://dk86iphdyvgq5"]
+
+[ext_resource type="Texture2D" uid="uid://c8arnlq67qi7" path="res://assets/textures/grids/Dark/texture_05.png" id="1_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://c8upf6osvdwx5" path="res://assets/textures/grids/Orange/texture_05.png" id="2_h2yge"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1bvp3"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_lquwl"]
+sky_material = SubResource("ProceduralSkyMaterial_1bvp3")
+
+[sub_resource type="Environment" id="Environment_7mycd"]
+background_mode = 2
+sky = SubResource("Sky_lquwl")
+tonemap_mode = 2
+sdfgi_enabled = true
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_272bh"]
+albedo_texture = ExtResource("1_0xm2m")
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5vw27"]
+albedo_texture = ExtResource("2_h2yge")
+uv1_triplanar = true
+
+[node name="world" type="Node3D" unique_id=1442601149]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1496657540]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=100593235]
+environment = SubResource("Environment_7mycd")
+
+[node name="map" type="Node3D" parent="." unique_id=1956915499]
+
+[node name="floor" type="CSGBox3D" parent="map" unique_id=161099457]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.6, 0)
+material_override = SubResource("StandardMaterial3D_272bh")
+use_collision = true
+size = Vector3(1000, 1, 1000)
+
+[node name="box1" type="CSGBox3D" parent="map" unique_id=1484063299]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8637915, 0.4, 0)
+material_override = SubResource("StandardMaterial3D_5vw27")
+use_collision = true
+
+[node name="box2" type="CSGBox3D" parent="map" unique_id=1517144663]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1777544, 0.89999974, 1.5049534)
+material_override = SubResource("StandardMaterial3D_5vw27")
+use_collision = true
+size = Vector3(2, 2, 2)
