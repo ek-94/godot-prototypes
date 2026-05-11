@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://dk86iphdyvgq5"]
 
-[ext_resource type="Texture2D" uid="uid://c8arnlq67qi7" path="res://assets/textures/grids/Dark/texture_05.png" id="1_0xm2m"]
-[ext_resource type="Texture2D" uid="uid://c8upf6osvdwx5" path="res://assets/textures/grids/Orange/texture_05.png" id="2_h2yge"]
+[ext_resource type="Texture2D" uid="uid://c8arnlq67qi7" path="res://assets/textures/grids/Dark/texture_05.png" id="1_sugp2"]
+[ext_resource type="Texture2D" uid="uid://c8upf6osvdwx5" path="res://assets/textures/grids/Orange/texture_05.png" id="2_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://buuoqq0neool" path="res://scenes/player.tscn" id="3_tbgi4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1bvp3"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -18,11 +19,11 @@ sdfgi_enabled = true
 glow_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_272bh"]
-albedo_texture = ExtResource("1_0xm2m")
+albedo_texture = ExtResource("1_sugp2")
 uv1_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5vw27"]
-albedo_texture = ExtResource("2_h2yge")
+albedo_texture = ExtResource("2_jyhfs")
 uv1_triplanar = true
 
 [node name="world" type="Node3D" unique_id=1442601149]
@@ -52,3 +53,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1777544, 0.89999974, 1.504
 material_override = SubResource("StandardMaterial3D_5vw27")
 use_collision = true
 size = Vector3(2, 2, 2)
+
+[node name="Player" parent="." unique_id=728067684 instance=ExtResource("3_tbgi4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4570591, -0.09828296, 2.5853357)
