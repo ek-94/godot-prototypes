@@ -1,0 +1,108 @@
+[gd_scene format=3 uid="uid://miycgyfysfxq"]
+
+[ext_resource type="Script" uid="uid://c4di1g5qdd26t" path="res://scripts/explosion.gd" id="1_17npe"]
+
+[sub_resource type="Gradient" id="Gradient_3oo6d"]
+colors = PackedColorArray(1, 0, 0, 1, 1, 0.3372549, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_17npe"]
+gradient = SubResource("Gradient_3oo6d")
+
+[sub_resource type="Curve" id="Curve_nfeox"]
+_limits = [0.0, 4.0, 0.0, 1.0]
+_data = [Vector2(0, 4), 0.0, 0.0, 0, 0, Vector2(0.93723845, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_aw4cw"]
+curve = SubResource("Curve_nfeox")
+
+[sub_resource type="Curve" id="Curve_3el85"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.87447697, 0.43820232), -1.4918853, -1.4918853, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_hbmxj"]
+curve = SubResource("Curve_3el85")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_xfoey"]
+emission_shape = 1
+emission_sphere_radius = 0.2
+spread = 180.0
+initial_velocity_max = 1.0
+gravity = Vector3(0, 0.3, 0)
+scale_min = 0.19999999
+scale_max = 0.39999998
+scale_curve = SubResource("CurveTexture_hbmxj")
+color_initial_ramp = SubResource("GradientTexture1D_17npe")
+emission_curve = SubResource("CurveTexture_aw4cw")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v8gpv"]
+transparency = 1
+vertex_color_use_as_albedo = true
+
+[sub_resource type="SphereMesh" id="SphereMesh_cun36"]
+material = SubResource("StandardMaterial3D_v8gpv")
+
+[sub_resource type="Curve" id="Curve_3oo6d"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_17npe"]
+curve = SubResource("Curve_3oo6d")
+
+[sub_resource type="Gradient" id="Gradient_nfeox"]
+colors = PackedColorArray(0.012617188, 0.012617188, 0.012617188, 1, 0.007181817, 0.007181817, 0.007181817, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_aw4cw"]
+gradient = SubResource("Gradient_nfeox")
+
+[sub_resource type="Curve" id="Curve_hbmxj"]
+_limits = [0.0, 4.0, 0.0, 1.0]
+_data = [Vector2(0, 4), 0.0, 0.0, 0, 0, Vector2(0.93723845, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_xfoey"]
+curve = SubResource("Curve_hbmxj")
+
+[sub_resource type="Curve" id="Curve_v8gpv"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.87447697, 0.43820232), -1.4918853, -1.4918853, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_cun36"]
+curve = SubResource("Curve_v8gpv")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vk406"]
+emission_shape = 1
+emission_sphere_radius = 0.2
+spread = 180.0
+initial_velocity_max = 0.5
+gravity = Vector3(0, 1, 0)
+scale_min = 0.19999999
+scale_max = 0.39999998
+scale_curve = SubResource("CurveTexture_cun36")
+color_initial_ramp = SubResource("GradientTexture1D_aw4cw")
+alpha_curve = SubResource("CurveTexture_17npe")
+emission_curve = SubResource("CurveTexture_xfoey")
+
+[node name="explosion" type="Node3D" unique_id=1474009261]
+script = ExtResource("1_17npe")
+
+[node name="fire" type="GPUParticles3D" parent="." unique_id=145525037]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, -0.035486042, 0)
+emitting = false
+amount = 32
+one_shot = true
+explosiveness = 0.9
+fixed_fps = 0
+process_material = SubResource("ParticleProcessMaterial_xfoey")
+draw_pass_1 = SubResource("SphereMesh_cun36")
+
+[node name="smoke" type="GPUParticles3D" parent="." unique_id=487634046]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, -0.035486042, 0)
+emitting = false
+amount = 28
+lifetime = 2.0
+one_shot = true
+explosiveness = 0.9
+fixed_fps = 0
+process_material = SubResource("ParticleProcessMaterial_vk406")
+draw_pass_1 = SubResource("SphereMesh_cun36")

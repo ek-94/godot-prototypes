@@ -5,6 +5,7 @@ extends CharacterBody3D
 @onready var visuals: Node3D = $visuals
 @onready var raycast: RayCast3D = $RayCast3D
 @onready var printer: Timer = $printer
+var grenade_scene: PackedScene = preload("res://scenes/ball.tscn")
 
 var SPEED = 3.0
 
@@ -26,6 +27,14 @@ func _input(event):
 		visuals.rotate_y(deg_to_rad(event.relative.x * sens))
 		camera_mount.rotate_x(deg_to_rad(-event.relative.y * sens))
 		
+func throw_grenade():
+	var grenade = grenade_scene.instantiate()
+	get_tree().current_scene.add_child(grenade)
+
+	grenade.global_position = global_position + -transform.basis.z
+	grenade.global_position.y += 1
+	grenade.apply_central_impulse(-transform.basis.z * 5)
+	
 func attack():
 	var end = raycast.to_global(raycast.target_position)
 	end.y = visuals.global_position.y
@@ -51,6 +60,9 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+	
+	if Input.is_action_just_pressed("throw_grenade"):
+		throw_grenade()
 	
 	if Input.is_action_just_pressed("attack"):
 		attack()
@@ -81,8 +93,9 @@ func _physics_process(delta: float) -> void:
 
 func hit():
 	var hit = raycast.get_collider()
-	if hit:
-		hit.die()
+	if is_instance_valid(hit):
+		if hit.is_in_group("enemies"):
+			hit.die()
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	is_attacking = false

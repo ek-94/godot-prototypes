@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://drbuovr1bnvg4"]
+
+[ext_resource type="Script" uid="uid://1i61k80jq8jq" path="res://ball.gd" id="1_7s4qf"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_cxlvu"]
+radius = 0.1
+height = 0.2
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_f7cbr"]
+radius = 0.1
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_7s4qf"]
+radius = 30.0
+
+[node name="ball" type="RigidBody3D" unique_id=90989264]
+contact_monitor = true
+max_contacts_reported = 5
+script = ExtResource("1_7s4qf")
+explosion_force = 10
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=629676424]
+mesh = SubResource("SphereMesh_cxlvu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1626962669]
+shape = SubResource("SphereShape3D_f7cbr")
+
+[node name="Timer" type="Timer" parent="." unique_id=1507801520]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[node name="Area3D" type="Area3D" parent="." unique_id=926066640]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1746666822]
+shape = SubResource("SphereShape3D_7s4qf")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
