@@ -33,7 +33,7 @@ func throw_grenade():
 
 	grenade.global_position = global_position + -transform.basis.z
 	grenade.global_position.y += 1
-	grenade.apply_central_impulse(-transform.basis.z * 5)
+	grenade.apply_central_impulse(-transform.basis.z * 14)
 	
 func attack():
 	var end = raycast.to_global(raycast.target_position)
