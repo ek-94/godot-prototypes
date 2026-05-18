@@ -55,6 +55,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_aiqbc")
 
 [node name="Shuriken6" type="RigidBody3D" unique_id=1005562290]
+collision_layer = 4
 collision_mask = 2
 gravity_scale = 0.0
 contact_monitor = true

@@ -3460,6 +3460,7 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody3D" unique_id=728067684]
+collision_layer = 8
 collision_mask = 3
 script = ExtResource("1_g2els")
 
@@ -3951,9 +3952,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3000001, 0)
 [node name="Camera3D" type="Camera3D" parent="camera_mount" unique_id=83306792]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6999999, 2.6632147)
 
-[node name="RayCast3D" type="RayCast3D" parent="." unique_id=20555690]
-transform = Transform3D(-4.1482316e-08, 0.22296089, 0.9748274, 9.74593e-09, 0.9748274, -0.22296089, -1, 2.5166536e-10, -4.261106e-08, 0, 1.1, 0)
-target_position = Vector3(1, 0, 0)
+[node name="RayCast3D" type="RayCast3D" parent="camera_mount/Camera3D" unique_id=20555690]
+transform = Transform3D(-4.1482316e-08, 0.22296089, 0.9748274, 9.74593e-09, 0.9748274, -0.22296089, -1, 2.5166536e-10, -4.261106e-08, 0, 0, 0)
+target_position = Vector3(100, 0, 0)
 collision_mask = 3
 
 [connection signal="animation_finished" from="visuals/mixamo_base/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

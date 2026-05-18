@@ -3,7 +3,7 @@ extends CharacterBody3D
 @onready var camera_mount: Node3D = $camera_mount
 @onready var animation_player: AnimationPlayer = $visuals/mixamo_base/AnimationPlayer
 @onready var visuals: Node3D = $visuals
-@onready var raycast: RayCast3D = $RayCast3D
+@onready var raycast: RayCast3D = $camera_mount/Camera3D/RayCast3D
 @onready var printer: Timer = $printer
 var grenade_scene: PackedScene = preload("res://scenes/ball.tscn")
 var shuriken_scene: PackedScene = preload("res://scenes/shuriken.tscn")
@@ -38,11 +38,19 @@ func throw_grenade():
 	var shuriken = shuriken_scene.instantiate()
 	get_tree().current_scene.add_child(shuriken)
 
-	shuriken.global_position = global_position + -transform.basis.z
+	shuriken.global_position = global_position
 		
 	shuriken.global_position.y += 1.1
-
-	var dir = (raycast.to_global(raycast.target_position) - raycast.global_position).normalized()
+	var target 
+	
+	if raycast.is_colliding():
+		print("colliding")
+		target = raycast.get_collision_point()
+	else:
+		print("not_colliding")
+		target = raycast.to_global(raycast.target_position)
+		
+	var dir = (target - shuriken.global_position).normalized()
 	shuriken.look_at(shuriken.global_position + dir, Vector3.UP)
 	shuriken.linear_velocity = dir * 8
 	
