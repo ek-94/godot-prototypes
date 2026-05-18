@@ -6,6 +6,7 @@ extends CharacterBody3D
 @onready var raycast: RayCast3D = $RayCast3D
 @onready var printer: Timer = $printer
 var grenade_scene: PackedScene = preload("res://scenes/ball.tscn")
+var shuriken_scene: PackedScene = preload("res://scenes/shuriken.tscn")
 
 var SPEED = 3.0
 
@@ -28,12 +29,22 @@ func _input(event):
 		camera_mount.rotate_x(deg_to_rad(-event.relative.y * sens))
 		
 func throw_grenade():
-	var grenade = grenade_scene.instantiate()
-	get_tree().current_scene.add_child(grenade)
+	#var grenade = grenade_scene.instantiate()
+	#get_tree().current_scene.add_child(grenade)
+#
+	#grenade.global_position = global_position + -transform.basis.z
+	#grenade.global_position.y += 1
+	#grenade.apply_central_impulse(-transform.basis.z * 14)
+	var shuriken = shuriken_scene.instantiate()
+	get_tree().current_scene.add_child(shuriken)
 
-	grenade.global_position = global_position + -transform.basis.z
-	grenade.global_position.y += 1
-	grenade.apply_central_impulse(-transform.basis.z * 14)
+	shuriken.global_position = global_position + -transform.basis.z
+		
+	shuriken.global_position.y += 1.1
+
+	var dir = (raycast.to_global(raycast.target_position) - raycast.global_position).normalized()
+	shuriken.look_at(shuriken.global_position + dir, Vector3.UP)
+	shuriken.linear_velocity = dir * 8
 	
 func attack():
 	var end = raycast.to_global(raycast.target_position)

@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://c8upf6osvdwx5" path="res://assets/textures/grids/Orange/texture_05.png" id="2_jyhfs"]
 [ext_resource type="Script" uid="uid://c2cxabe1mc3h" path="res://scenes/mesh_instance_3d.gd" id="2_tefeu"]
 [ext_resource type="PackedScene" uid="uid://buuoqq0neool" path="res://scenes/player.tscn" id="3_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://0bo4swxayql5" path="res://scenes/Shuriken.tscn" id="6_tefeu"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1bvp3"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -67,3 +68,6 @@ size = Vector3(14.026367, 5, 1)
 
 [node name="Player" parent="." unique_id=728067684 instance=ExtResource("3_tbgi4")]
 transform = Transform3D(-0.560639, 0, -0.8280603, 0, 1, 0, 0.8280603, 0, -0.560639, 0.046660185, -0.09828296, -11.283843)
+
+[node name="Node3D" parent="." unique_id=1583821364 instance=ExtResource("6_tefeu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7809143, 1.269484, -0.08671999)
