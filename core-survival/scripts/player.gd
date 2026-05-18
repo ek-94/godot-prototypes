@@ -52,7 +52,7 @@ func throw_grenade():
 		
 	var dir = (target - shuriken.global_position).normalized()
 	shuriken.look_at(shuriken.global_position + dir, Vector3.UP)
-	shuriken.linear_velocity = dir * 8
+	shuriken.linear_velocity = dir * 12
 	
 func attack():
 	var end = raycast.to_global(raycast.target_position)

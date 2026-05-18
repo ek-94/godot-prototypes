@@ -4,6 +4,7 @@ extends CharacterBody3D
 @onready var collision: CollisionShape3D = $CollisionShape3D
 @onready var physical_bone_simulator_3d: PhysicalBoneSimulator3D = $visuals/mixamo_base/Armature/Skeleton3D/PhysicalBoneSimulator3D
 @onready var printer: Timer = $printer
+@onready var blood_particles_scene = preload("res://scenes/blood_particles.tscn")
 
 @onready var player = get_parent().get_node("Player")
 @onready var animation_player: AnimationPlayer = $visuals/mixamo_base/AnimationPlayer
@@ -17,9 +18,19 @@ var dead = true
 var getting_up = false
 var speed = 1.0
 var idle = true
+var health = 100
 
 func _ready():
 	pass
+	
+func take_damage(damage, pos):
+	var blood_particles = blood_particles_scene.instantiate()
+	blood_particles.global_position = pos
+	get_tree().current_scene.add_child(blood_particles)
+	if health > 0:
+		health -= damage
+		if health < 0:
+			die()
 	
 func turn_on_ragdoll():
 	collision.disabled = true

@@ -15,3 +15,8 @@ func _on_body_entered(body: Node) -> void:
 	stuck = true
 	freeze = true
 	$CollisionShape3D.disabled = true
+	
+	if body.is_in_group("enemies"):
+		body.take_damage(34, global_position)
+	
+	queue_free()

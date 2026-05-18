@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://buuoqq0neool"]
 
 [ext_resource type="Script" uid="uid://qmfbdnux1eeu" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://mcr5k2rnup4e" path="res://crosshair012.png" id="2_g2els"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g2els"]
 radius = 0.40625
@@ -3956,5 +3957,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6999999, 2.6632147)
 transform = Transform3D(-4.1482316e-08, 0.22296089, 0.9748274, 9.74593e-09, 0.9748274, -0.22296089, -1, 2.5166536e-10, -4.261106e-08, 0, 0, 0)
 target_position = Vector3(100, 0, 0)
 collision_mask = 3
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1195970728]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1641449250]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -31.375
+offset_top = -28.0
+offset_right = 31.375
+offset_bottom = 28.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+texture = ExtResource("2_g2els")
+expand_mode = 1
+stretch_mode = 5
 
 [connection signal="animation_finished" from="visuals/mixamo_base/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

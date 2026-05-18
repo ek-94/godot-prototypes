@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://c8upf6osvdwx5" path="res://assets/textures/grids/Orange/texture_05.png" id="2_jyhfs"]
 [ext_resource type="Script" uid="uid://c2cxabe1mc3h" path="res://scenes/mesh_instance_3d.gd" id="2_tefeu"]
 [ext_resource type="PackedScene" uid="uid://buuoqq0neool" path="res://scenes/player.tscn" id="3_tbgi4"]
-[ext_resource type="PackedScene" uid="uid://0bo4swxayql5" path="res://scenes/Shuriken.tscn" id="6_tefeu"]
+[ext_resource type="PackedScene" uid="uid://qw2tid071oqk" path="res://scenes/Shuriken.tscn" id="6_tefeu"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1bvp3"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)

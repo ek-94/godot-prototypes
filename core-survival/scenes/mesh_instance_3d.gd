@@ -15,7 +15,7 @@ var noise = FastNoiseLite.new()
 
 func get_terrain_height(x, z):
 	return noise.get_noise_2d(x, z) * terrain_height
-
+	
 func spawn_enemies(amount):
 	for i in range(amount):
 		var enemy = enemy_scene.instantiate()

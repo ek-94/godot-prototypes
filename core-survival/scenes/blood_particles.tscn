@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bllf4snygg1wb"]
+
+[ext_resource type="Script" uid="uid://dd7rfcv5hb4mt" path="res://scenes/blood_particles.gd" id="1_hjwtm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3r22h"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_hjwtm"]
+lifetime_randomness = 0.5
+spread = 180.0
+initial_velocity_min = 1.0
+initial_velocity_max = 5.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_4enpv"]
+radius = 0.03
+height = 0.06
+
+[node name="blood_particles" type="GPUParticles3D" unique_id=873861456]
+material_override = SubResource("StandardMaterial3D_3r22h")
+emitting = false
+amount = 16
+lifetime = 0.9
+one_shot = true
+explosiveness = 0.9
+randomness = 0.5
+process_material = SubResource("ParticleProcessMaterial_hjwtm")
+draw_pass_1 = SubResource("SphereMesh_4enpv")
+script = ExtResource("1_hjwtm")
+
+[connection signal="finished" from="." to="." method="_on_finished"]
