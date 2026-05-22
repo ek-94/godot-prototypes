@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cx4838qfjdkyl"]
 
 [ext_resource type="Script" uid="uid://dyajfvepor6f0" path="res://camera_3d.gd" id="1_f3sb7"]
+[ext_resource type="Script" uid="uid://sfirvywdtori" path="res://camera_mount.gd" id="1_fj7yv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_f3sb7"]
 sky_top_color = Color(0, 0, 0.9019608, 1)
@@ -19,6 +20,9 @@ sdfgi_enabled = true
 glow_enabled = true
 fog_light_color = Color(1, 0, 0, 1)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fj7yv"]
+albedo_color = Color(1, 0.5058824, 0, 1)
+
 [node name="world" type="Node3D" unique_id=817507099]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1194177203]
@@ -32,6 +36,16 @@ environment = SubResource("Environment_tlwt5")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 size = Vector3(20, 1, 20)
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=1100425505]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+[node name="CameraMount" type="Node3D" parent="." unique_id=1561455420]
+script = ExtResource("1_fj7yv")
+
+[node name="Camera3D" type="Camera3D" parent="CameraMount" unique_id=1100425505]
+transform = Transform3D(1, 0, 0, 0, 0.79652995, 0.6045992, 0, -0.6045992, 0.79652995, 0, 3.1267114, 0)
 script = ExtResource("1_f3sb7")
+
+[node name="RayCast3D" type="RayCast3D" parent="CameraMount/Camera3D" unique_id=11789903]
+target_position = Vector3(0, 0, -100)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=1271122930]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8, 0.5, 0)
+material = SubResource("StandardMaterial3D_fj7yv")
