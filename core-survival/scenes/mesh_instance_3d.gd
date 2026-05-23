@@ -1,6 +1,7 @@
 extends MeshInstance3D
 
 var enemy_scene: PackedScene = preload("res://scenes/enemy.tscn")
+var goblin_scene: PackedScene = preload("res://scenes/golbin.tscn")
 # --- Terrain settings ---
 var terrain_size = 2000
 var terrain_resolution = 500
@@ -18,7 +19,7 @@ func get_terrain_height(x, z):
 	
 func spawn_enemies(amount):
 	for i in range(amount):
-		var enemy = enemy_scene.instantiate()
+		var enemy = goblin_scene.instantiate()
 		get_tree().current_scene.add_child(enemy)
 
 		var radius = 100

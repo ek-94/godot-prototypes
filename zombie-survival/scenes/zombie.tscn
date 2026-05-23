@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://blmn56ddpj6bt"]
 
 [ext_resource type="PackedScene" uid="uid://c3k4umabr7di4" path="res://assets/zombie_soldier.glb" id="1_1vlb3"]
+[ext_resource type="Script" uid="uid://mxlchige26t1" path="res://scenes/zombie.gd" id="1_httt1"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_httt1"]
 radius = 0.34521484
@@ -3150,6 +3151,7 @@ _data = {
 }
 
 [node name="zombie" type="CharacterBody3D" unique_id=441396500]
+script = ExtResource("1_httt1")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1455812814]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9091797, 0)
@@ -3207,5 +3209,7 @@ bones/54/rotation = Quaternion(0.0033529305, -0.17400463, 0.03306092, 0.98418397
 [node name="AnimationPlayer" parent="visuals/Sketchfab_Scene" index="1" unique_id=2137480329]
 libraries/ = SubResource("AnimationLibrary_7pfmu")
 autoplay = &"zombie_02_Idle"
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1262292435]
 
 [editable path="visuals/Sketchfab_Scene"]

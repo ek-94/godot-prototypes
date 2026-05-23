@@ -4,6 +4,7 @@ extends Node3D
 @onready var pitch_pivot: Node3D = $yaw_pivot/pitch_pivot
 @onready var camera: Camera3D = $yaw_pivot/pitch_pivot/Camera3D
 @onready var raycast: RayCast3D = $yaw_pivot/pitch_pivot/Camera3D/RayCast3D
+@onready var raycast_mouse: RayCast3D = $yaw_pivot/pitch_pivot/Camera3D/raycast_mouse
 
 var rotate_speed = 0.5
 var camera_speed = 3
