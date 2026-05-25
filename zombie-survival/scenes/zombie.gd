@@ -1,6 +1,7 @@
 extends CharacterBody3D
 
 @onready var camera = get_parent().find_child("Camera3D")
+@onready var collision: CollisionShape3D = $CollisionShape3D
 @onready var mouse_ray : RayCast3D = camera.find_child("raycast_mouse")
 @onready var navigation_agent_3d: NavigationAgent3D = $NavigationAgent3D
 @onready var animation_player: AnimationPlayer = $visuals/Sketchfab_Scene/AnimationPlayer
@@ -9,6 +10,17 @@ extends CharacterBody3D
 
 func _ready():
 	navigation_agent_3d.target_desired_distance = 0.05
+
+func turn_on_ragdoll():
+	collision.disabled = true
+	animation_player.stop()
+	physical_bone_simulator_3d.physical_bones_start_simulation()
+	physical_bone_simulator_3d.active = true
+	
+	for bone in physical_bone_simulator_3d.get_children():
+		if bone is PhysicalBone3D:
+			bone.linear_velocity = velocity
+			bone.apply_central_impulse(velocity * 0.2)
 	
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
@@ -57,3 +69,7 @@ func _physics_process(delta: float) -> void:
 func _on_navigation_agent_3d_navigation_finished() -> void:
 	print("ok")
 	velocity = Vector3.ZERO # Replace with function body.
+
+
+func _on_timer_timeout() -> void:
+	turn_on_ragdoll() # Replace with function body.
