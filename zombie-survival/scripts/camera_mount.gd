@@ -7,7 +7,8 @@ extends Node3D
 @onready var raycast_mouse: RayCast3D = $yaw_pivot/pitch_pivot/Camera3D/raycast_mouse
 
 var rotate_speed = 0.5
-var camera_speed = 3
+var camera_speed = 8
+var zoom_speed = 60
 var mouse_delta = Vector2.ZERO
 
 func _input(event):
@@ -80,12 +81,12 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_released("zoom_in"):
 		var dir = raycast.global_position - raycast.to_global(raycast.target_position)
 		dir = dir.normalized()
-		position += -dir * camera_speed * delta
+		position += -dir * zoom_speed * delta
 	
 	if Input.is_action_just_released("zoom_out"):
 		var dir = raycast.global_position - raycast.to_global(raycast.target_position)
 		dir = dir.normalized()
-		position += dir * camera_speed * delta
+		position += dir * zoom_speed * delta
 		
 func _physics_process(delta):
 	pass
