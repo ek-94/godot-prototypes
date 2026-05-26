@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://sfirvywdtori" path="res://scripts/camera_mount.gd" id="1_nnsk1"]
 [ext_resource type="PackedScene" uid="uid://blmn56ddpj6bt" path="res://scenes/zombie.tscn" id="2_rwgxs"]
+[ext_resource type="PackedScene" uid="uid://j4lrujn00xm8" path="res://scenes/zombie_enemy.tscn" id="3_4wyf3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_f3sb7"]
 sky_top_color = Color(0, 0, 0.9019608, 1)
@@ -21,14 +22,12 @@ glow_enabled = true
 fog_light_color = Color(1, 0, 0, 1)
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_rwgxs"]
-vertices = PackedVector3Array(6.5, 0.03999996, -0.75, 6.5, 0.03999996, 0.25, 9, 0.03999996, 0.25, -9, 0.03999996, -5.25, -6.5, 0.03999996, -5.25, -6.5, 0.03999996, -6.75, 4.25, 0.03999996, -4.25, 4.5, 0.03999996, -1.5, 5.75, 0.03999996, -1.5, 5.5, 0.03999996, -5, -9, 0.03999996, -9, -5.75, 0.03999996, -7.5, 4.75, 0.03999996, -7.5, 9, 0.03999996, -9, 5.5, 0.03999996, -6.75, 6.5, 0.03999996, 1, -5.75, 0.03999996, -4.25, 5.75, 0.03999996, 1.75, 9, 0.03999996, 9, 3.25, 0.03999996, -0.75, 4, 0.03999996, 1.75, 3.25, 0.03999996, 1, -9, 0.03999996, 9)
-polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(5, 4, 3), PackedInt32Array(7, 6, 8), PackedInt32Array(8, 6, 9), PackedInt32Array(5, 3, 11), PackedInt32Array(11, 3, 10), PackedInt32Array(11, 10, 12), PackedInt32Array(12, 10, 13), PackedInt32Array(12, 13, 14), PackedInt32Array(0, 8, 2), PackedInt32Array(2, 8, 9), PackedInt32Array(2, 9, 14), PackedInt32Array(2, 14, 13), PackedInt32Array(15, 1, 2), PackedInt32Array(3, 4, 16), PackedInt32Array(15, 2, 17), PackedInt32Array(17, 2, 18), PackedInt32Array(7, 19, 6), PackedInt32Array(6, 19, 16), PackedInt32Array(20, 18, 21), PackedInt32Array(21, 18, 16), PackedInt32Array(16, 18, 3), PackedInt32Array(3, 18, 22), PackedInt32Array(20, 17, 18), PackedInt32Array(16, 19, 21)]
+vertices = PackedVector3Array(-24.459667, 0.01999998, -18.219433, -24.459667, 0.01999998, 18.980568, 9.340332, 0.01999998, 18.980568, 9.340332, 0.01999998, -18.219433)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
 geometry_parsed_geometry_type = 1
-cell_height = 0.02
-agent_radius = 0.8
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fj7yv"]
-albedo_color = Color(1, 0.5058824, 0, 1)
+cell_size = 0.1
+cell_height = 0.01
+agent_radius = 0.7
 
 [node name="world" type="Node3D" unique_id=817507099]
 
@@ -42,20 +41,10 @@ environment = SubResource("Environment_tlwt5")
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1290171979]
 navigation_mesh = SubResource("NavigationMesh_rwgxs")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D" unique_id=1071331506]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D" unique_id=1884004330]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.579834, -0.5, 0.3770752)
 use_collision = true
-size = Vector3(20, 1, 20)
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="NavigationRegion3D" unique_id=1271122930]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8, 0.5, 0)
-use_collision = true
-material = SubResource("StandardMaterial3D_fj7yv")
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="NavigationRegion3D" unique_id=1451160616]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.58117676, 2.6591187, -5.8)
-use_collision = true
-size = Vector3(9.721924, 5.3182373, 1)
+size = Vector3(35.159668, 1, 38.593018)
 
 [node name="CameraMount" type="Node3D" parent="." unique_id=1561455420]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.707839, 0, 3.6310403)
@@ -74,4 +63,6 @@ target_position = Vector3(0, 0, -100)
 [node name="raycast_mouse" type="RayCast3D" parent="CameraMount/yaw_pivot/pitch_pivot/Camera3D" unique_id=1959634429]
 
 [node name="zombie" parent="." unique_id=441396500 instance=ExtResource("2_rwgxs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5182166, 0, -0.007750988)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4182129, 0, -0.007750988)
+
+[node name="zombie2" parent="." unique_id=785021093 instance=ExtResource("3_4wyf3")]

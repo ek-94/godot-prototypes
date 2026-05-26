@@ -9,7 +9,8 @@ extends CharacterBody3D
 @onready var visuals: Node3D = $visuals
 @onready var physical_bone_simulator_3d: PhysicalBoneSimulator3D = $visuals/Sketchfab_Scene/Sketchfab_model/fbx_merge_fbx/Object_2/RootNode/Root/Object_5/Skeleton3D/PhysicalBoneSimulator3D
 
-@export var run_speed = 10
+@export var run_speed = 3
+
 func _ready():
 	navigation_agent_3d.target_desired_distance = 0.05
 
@@ -28,18 +29,9 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 			velocity += get_gravity() * delta
 
-	if Input.is_action_pressed("move"):
-		var mouse_pos = get_viewport().get_mouse_position()
-
-		var ray_origin = camera.project_ray_origin(mouse_pos)
-		var ray_direction = camera.project_ray_normal(mouse_pos)
-		var ray_end = ray_origin + ray_direction * 1000
-
-		var query = PhysicsRayQueryParameters3D.create(ray_origin, ray_end)
-		var result = get_world_3d().direct_space_state.intersect_ray(query)
-		
-		if result:
-			navigation_agent_3d.set_target_position(result.position)
+	var target = player.global_position
+	
+	navigation_agent_3d.set_target_position(target)
 
 	if navigation_agent_3d.is_navigation_finished():
 		velocity = Vector3.ZERO
