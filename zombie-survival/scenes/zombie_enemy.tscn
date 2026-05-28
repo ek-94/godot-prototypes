@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://j4lrujn00xm8"]
+[gd_scene format=3 uid="uid://lnvq0v1olyhr"]
 
 [ext_resource type="Script" uid="uid://mxlchige26t1" path="res://scripts/zombie_enemy.gd" id="1_nso2s"]
 [ext_resource type="PackedScene" uid="uid://c3k4umabr7di4" path="res://assets/zombie_soldier.glb" id="2_rix07"]
@@ -3411,10 +3411,10 @@ shape = SubResource("CapsuleShape3D_xepks")
 disabled = true
 
 [node name="Physical Bone Hips_01" type="PhysicalBone3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/fbx_merge_fbx/Object_2/RootNode/Root/Object_5/Skeleton3D/PhysicalBoneSimulator3D" unique_id=1337828019]
-transform = Transform3D(53.01639, 303.2772, -951.42633, -221.03407, 932.6973, 284.99045, 973.824, 195.18848, 116.48285, 61.22009, -0.8252989, 694.5362)
+transform = Transform3D(146.2702, -398.75323, -905.3181, -196.60078, 885.18823, -421.6513, 969.5117, 239.66127, 51.08146, 31.617453, -0.38885695, 722.402)
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.755543e-07, -4.48199e-08, 0.06009307)
-body_offset = Transform3D(-997.8261, -1.4406433, -65.88408, 3.0517578e-05, 999.76086, -21.862213, 65.89981, -21.814728, -997.58765, 3.9593506, 1.3138123, 59.94809)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.14087015e-07, -2.4330802e-08, 0.060093056)
+body_offset = Transform3D(-997.82605, -1.4406891, -65.88408, 4.5776367e-05, 999.76086, -21.862305, 65.89981, -21.814728, -997.5877, 3.9592896, 1.313797, 59.948086)
 bone_name = "Hips_01"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 180.0
@@ -3427,10 +3427,10 @@ transform = Transform3D(0.0009999992, 1.4551915e-11, -1.4551915e-11, -1.0186341e
 shape = SubResource("CapsuleShape3D_4gx57")
 
 [node name="Physical Bone LeftUpLeg_02" type="PhysicalBone3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/fbx_merge_fbx/Object_2/RootNode/Root/Object_5/Skeleton3D/PhysicalBoneSimulator3D" unique_id=1296718653]
-transform = Transform3D(-225.56645, 953.88855, -198.0312, -715.0975, -24.065048, 698.6104, 661.6308, 299.19467, 687.5516, 155.24359, -147.94597, 559.60034)
+transform = Transform3D(130.03604, 897.6559, -421.0753, -689.93286, 386.92365, 611.7865, 712.0978, 210.95938, 669.63635, 164.37335, -88.88913, 594.7298)
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8757662e-07, -7.24381e-07, 0.18607566)
-body_offset = Transform3D(0.002319336, 0.0042419434, -1000, 0.005674362, 1000, 0.0042209625, 1000.00006, -0.0057239532, 0.0024108887, 186.07565, -6.1035156e-05, -6.1035156e-05)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6486233e-07, -7.101871e-07, 0.18607566)
+body_offset = Transform3D(0.002380371, 0.004180908, -1000, 0.0056762695, 999.9999, 0.0042266846, 999.9998, -0.005706787, 0.0022888184, 186.07565, -7.6293945e-05, -6.1035156e-05)
 bone_name = "LeftUpLeg_02"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 180.0
@@ -3443,10 +3443,10 @@ transform = Transform3D(0.0010000002, 1.1641532e-10, -2.8740033e-10, -7.2759576e
 shape = SubResource("CapsuleShape3D_ycv6i")
 
 [node name="Physical Bone LeftLeg_03" type="PhysicalBone3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/fbx_merge_fbx/Object_2/RootNode/Root/Object_5/Skeleton3D/PhysicalBoneSimulator3D" unique_id=2105670352]
-transform = Transform3D(-145.72395, -957.83295, -247.62982, 921.9752, -40.707317, -385.10336, 358.7843, -284.42737, 889.0303, 238.63954, -205.5534, 264.5559)
+transform = Transform3D(-444.72577, -888.7205, -111.33171, 888.492, -422.04022, -180.1774, 113.1409, -179.04688, 977.3133, 263.65274, -168.8597, 286.42456)
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.821164e-07, 3.930945e-07, 0.18796733)
-body_offset = Transform3D(-0.00039672852, 0.00039196014, -1000, 0.00025558472, 1000, 0.00050640106, 999.99994, -0.0002746582, -0.00036621094, 187.96732, -0.00048828125, 0.00035095215)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1745222e-07, 3.7888952e-07, 0.18796735)
+body_offset = Transform3D(-0.00039672852, 0.0004043579, -999.99976, 0.00024414063, 1000, 0.0004196167, 999.99994, -0.00024414063, -0.0002593994, 187.96729, -0.00045776367, 0.00036621094)
 bone_name = "LeftLeg_03"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 180.0
@@ -3459,10 +3459,10 @@ transform = Transform3D(0.001, -1.7462298e-10, -8.731149e-11, -9.822543e-11, -4.
 shape = SubResource("CapsuleShape3D_pjjxt")
 
 [node name="Physical Bone LeftFoot_04" type="PhysicalBone3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/fbx_merge_fbx/Object_2/RootNode/Root/Object_5/Skeleton3D/PhysicalBoneSimulator3D" unique_id=1093572488]
-transform = Transform3D(259.40955, 942.6696, -209.9537, -585.83923, 326.426, 741.7805, 767.7884, -69.42586, 636.9309, 299.93628, -185.28342, 52.69784)
+transform = Transform3D(324.30734, 918.44666, -226.45157, -588.9381, 383.37375, 711.4607, 740.25433, -97.36592, 665.23926, 300.48932, -184.97887, 55.983433)
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.848506e-08, -1.1034983e-07, 0.07025838)
-body_offset = Transform3D(0.00033569336, 0.0007019043, -999.9999, 7.6293945e-05, 999.99994, 0.0007019043, 999.99976, -4.5776367e-05, 0.00033569336, 70.25838, 6.1035156e-05, -0.00012207031)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.9658634e-08, -1.4301153e-07, 0.07025839)
+body_offset = Transform3D(0.00039672852, 0.0006713867, -1000, 0.00010681152, 1000, 0.0007324219, 999.99963, 0, 0.00024414063, 70.258385, 9.1552734e-05, -0.00010681152)
 bone_name = "LeftFoot_04"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 180.0
@@ -3475,10 +3475,10 @@ transform = Transform3D(0.0010000046, -2.8230716e-09, 1.6007107e-10, -3.1286618e
 shape = SubResource("CapsuleShape3D_7pfmu")
 
 [node name="Physical Bone RightUpLeg_06" type="PhysicalBone3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/fbx_merge_fbx/Object_2/RootNode/Root/Object_5/Skeleton3D/PhysicalBoneSimulator3D" unique_id=569787334]
-transform = Transform3D(-205.06013, 829.19403, 519.98804, -820.2291, -435.461, 370.94193, 534.01733, -350.44394, 769.42474, -205.21259, -10.428022, 557.8618)
+transform = Transform3D(180.10023, 946.4226, 268.04504, -958.30206, 107.357895, 264.8231, 221.85777, -304.56284, 926.29395, -184.8215, -117.45696, 545.1238)
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.3738526e-09, 1.0642508e-08, 0.1860761)
-body_offset = Transform3D(0.0005187988, 6.1035156e-05, -999.9999, -0.00030517578, 1000, 0.00010681152, 999.9999, 0.00033569336, 0.00045776367, 186.07608, -3.0517578e-05, -9.1552734e-05)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.298983e-08, -3.549015e-10, 0.1860761)
+body_offset = Transform3D(0.00050354004, 7.6293945e-05, -999.9999, -0.00032043457, 999.9999, 1.9073486e-06, 999.9999, 0.0002822876, 0.00039672852, 186.07608, 0, -0.00010681152)
 bone_name = "RightUpLeg_06"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 180.0
@@ -3491,10 +3491,10 @@ transform = Transform3D(0.0010000037, -1.4842954e-09, -3.783498e-10, 0, 1.455191
 shape = SubResource("CapsuleShape3D_3fthk")
 
 [node name="Physical Bone RightLeg_07" type="PhysicalBone3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/fbx_merge_fbx/Object_2/RootNode/Root/Object_5/Skeleton3D/PhysicalBoneSimulator3D" unique_id=1787902635]
-transform = Transform3D(644.1011, -760.5256, -82.06471, 615.44025, 578.9389, -534.8486, 454.2765, 293.9906, 840.95325, -286.54468, 21.094402, 256.60654)
+transform = Transform3D(456.31915, -882.8059, 111.474434, 652.22015, 246.61911, -716.7899, 605.2947, 399.7909, 688.3208, -255.65599, -31.987442, 243.3719)
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1129333e-06, -3.5439411e-06, 0.18798356)
-body_offset = Transform3D(-0.0008544922, 0.00021362305, -999.9999, 0.00064086914, 1000, 0.00018310547, 999.999, -0.00048828125, -0.0008544922, 187.98352, 0.0035095215, 0.0022735596)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.114855e-06, -3.5496778e-06, 0.18798357)
+body_offset = Transform3D(-0.0009460449, 0.00016784668, -999.9999, 0.00062561035, 1000.00006, 0.00021362305, 999.999, -0.0005493164, -0.0008239746, 187.98354, 0.0035095215, 0.0022697449)
 bone_name = "RightLeg_07"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 180.0
@@ -3507,10 +3507,10 @@ transform = Transform3D(0.001, 1.4551915e-10, 0, 3.4924597e-10, -2.3283064e-10, 
 shape = SubResource("CapsuleShape3D_aetfh")
 
 [node name="Physical Bone RightFoot_08" type="PhysicalBone3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/fbx_merge_fbx/Object_2/RootNode/Root/Object_5/Skeleton3D/PhysicalBoneSimulator3D" unique_id=75974605]
-transform = Transform3D(-531.3919, 573.20465, 623.7459, -365.8608, -819.38794, 441.30396, 764.0474, 6.301124, 645.1292, -314.9431, 90.609665, 53.222244)
+transform = Transform3D(-416.98413, 665.0757, 619.5147, -574.2993, -721.0893, 387.56985, 704.4888, -194.1764, 682.6353, -320.13168, 75.49986, 66.03881)
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5439374e-07, 1.9442343e-08, 0.07025886)
-body_offset = Transform3D(0.001739502, -0.0021972656, -999.99915, -0.00021362305, 1000.0001, -0.0020141602, 1000, 9.1552734e-05, 0.002243042, 70.258804, 0.00012207031, -0.0004119873)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7930116e-07, -3.0372426e-08, 0.07025886)
+body_offset = Transform3D(0.0017547607, -0.002166748, -999.99915, -0.00015258789, 999.9998, -0.001739502, 999.9998, -3.0517578e-05, 0.002105713, 70.258804, 0.00015258789, -0.0004272461)
 bone_name = "RightFoot_08"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 180.0
@@ -3523,10 +3523,10 @@ transform = Transform3D(0.001000001, 7.2759576e-11, 1.4551915e-10, -2.3283064e-1
 shape = SubResource("CapsuleShape3D_jjlcg")
 
 [node name="Physical Bone Spine_011" type="PhysicalBone3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/fbx_merge_fbx/Object_2/RootNode/Root/Object_5/Skeleton3D/PhysicalBoneSimulator3D" unique_id=207879016]
-transform = Transform3D(-323.27246, -943.1745, -76.92058, -942.69446, 328.06778, -60.81619, 82.59545, 52.85241, -995.1806, 11.435093, 22.1426, 797.1361)
+transform = Transform3D(432.9263, -898.79254, 68.895874, -898.56396, -436.37695, -46.451866, 71.81516, -41.79712, -996.54175, -29.404135, -21.265081, 821.2024)
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2177577e-07, -2.2203276e-08, 0.09606287)
-body_offset = Transform3D(0.0016212463, 0.00030899048, -1000, 0.0002746582, 999.9998, 0.0002708435, 999.9999, -0.00024414063, 0.001625061, 96.06287, -3.8146973e-06, -3.4332275e-05)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2925496e-07, -2.4181206e-08, 0.09606286)
+body_offset = Transform3D(0.0016098022, 0.00030899048, -1000.0001, 0.00024414063, 999.99976, 0.00030136108, 999.99994, -0.00033569336, 0.001663208, 96.06287, -4.7683716e-06, -3.0517578e-05)
 bone_name = "Spine_011"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 180.0
@@ -3539,10 +3539,10 @@ transform = Transform3D(0.0010000006, -2.1827873e-10, 0, -7.858034e-10, 6.184564
 shape = SubResource("CapsuleShape3D_iblsu")
 
 [node name="Physical Bone Spine1_012" type="PhysicalBone3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/fbx_merge_fbx/Object_2/RootNode/Root/Object_5/Skeleton3D/PhysicalBoneSimulator3D" unique_id=78254480]
-transform = Transform3D(-348.8159, -937.1912, 0.16947396, -932.82965, 347.20996, 96.30123, -90.3115, 33.433304, -995.35223, 18.807907, 18.665096, 989.06287)
+transform = Transform3D(524.61975, -844.84106, 104.96499, -851.07166, -517.37885, 89.42098, -21.23985, -136.24474, -990.44745, -46.180584, -25.456654, 1012.7854)
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2330655e-08, 3.3840313e-09, 0.09677582)
-body_offset = Transform3D(9.1552734e-05, -3.8146973e-06, -999.9999, 0, 999.99976, -1.5258789e-05, 999.9998, -9.1552734e-05, 0.00011444092, 96.77582, -1.9073486e-06, -5.340576e-05)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.097695e-08, 5.414373e-09, 0.09677588)
+body_offset = Transform3D(9.1552734e-05, 3.8146973e-06, -1000, -3.0517578e-05, 999.9999, 2.2888184e-05, 999.99994, 3.0517578e-05, 0.00016784668, 96.77588, -7.6293945e-06, -5.722046e-05)
 bone_name = "Spine1_012"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 180.0
@@ -3555,10 +3555,10 @@ transform = Transform3D(0.0010000158, 4.4383341e-10, -1.9790605e-09, 1.1641532e-
 shape = SubResource("CapsuleShape3D_ida1p")
 
 [node name="Physical Bone Spine2_013" type="PhysicalBone3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/fbx_merge_fbx/Object_2/RootNode/Root/Object_5/Skeleton3D/PhysicalBoneSimulator3D" unique_id=20083817]
-transform = Transform3D(-354.91318, -929.864, 96.89955, -884.9021, 367.56442, 286.0848, -301.63684, 15.788654, -953.2921, 10.266418, -15.823795, 1169.2574)
+transform = Transform3D(624.09064, -775.90173, 92.126625, -768.1001, -587.60333, 254.44942, -143.29384, -229.56195, -962.688, -64.443665, -56.49655, 1193.3319)
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4104651e-07, -2.3225349e-08, 0.08797768)
-body_offset = Transform3D(0.0030975342, 0.00010681152, -999.9999, -0.0002746582, 999.9999, 0.00010681152, 999.9999, 0.00021362305, 0.0029907227, 87.97766, 1.3828278e-05, -0.00012207031)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7241476e-07, -4.259954e-08, 0.087977774)
+body_offset = Transform3D(0.003112793, 0.00010681152, -1000.0001, -0.0002746582, 999.9999, 0.0001373291, 1000.0002, 0.00036621094, 0.0031738281, 87.97778, 3.0517578e-05, -0.00010681152)
 bone_name = "Spine2_013"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 180.0
@@ -3571,10 +3571,10 @@ transform = Transform3D(0.0010000011, 2.6193447e-10, -2.0372681e-10, 1.0768417e-
 shape = SubResource("CapsuleShape3D_u6hpf")
 
 [node name="Physical Bone Spine3_014" type="PhysicalBone3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/fbx_merge_fbx/Object_2/RootNode/Root/Object_5/Skeleton3D/PhysicalBoneSimulator3D" unique_id=984863805]
-transform = Transform3D(24.978214, 856.11084, 516.1882, 58.993717, -516.7118, 854.12445, 997.94574, 9.117357, -63.411694, -48.69948, -124.45616, 1259.3221)
+transform = Transform3D(-438.24548, 768.09796, -466.8686, 25.21625, 529.70496, 847.807, 898.50146, 359.77493, -251.50941, -26.927242, -161.7284, 1302.6038)
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3527613e-08, 2.0023435e-08, 0.097718135)
-body_offset = Transform3D(643.7611, 109.672226, -757.32666, 1.7166138e-05, 989.6763, 143.31982, 765.2265, -92.263855, 637.1152, 74.00458, -14.004969, -62.25769)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.195639e-08, -3.259629e-09, 0.0977182)
+body_offset = Transform3D(643.76117, 109.67236, -757.3265, -2.4795532e-05, 989.6764, 143.32004, 765.22656, -92.263794, 637.1151, 74.00464, -14.004974, -62.25769)
 bone_name = "Spine3_014"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 180.0
@@ -3587,10 +3587,10 @@ transform = Transform3D(0.0009999961, 1.3460522e-10, -2.2191671e-10, -6.730261e-
 shape = SubResource("CapsuleShape3D_eskk2")
 
 [node name="Physical Bone RightShoulder_015" type="PhysicalBone3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/fbx_merge_fbx/Object_2/RootNode/Root/Object_5/Skeleton3D/PhysicalBoneSimulator3D" unique_id=1725458333]
-transform = Transform3D(-72.263664, -598.37366, 797.95166, -519.69336, -660.26526, -542.18866, 851.2912, -453.8707, -263.25763, -174.83806, -156.48633, 1290.4918)
+transform = Transform3D(246.21509, 701.1082, 669.1975, 30.662144, -695.7419, 717.6371, 968.7301, -156.17404, -192.79965, -44.78762, -312.65323, 1345.4705)
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.1490725e-08, -1.0074027e-06, 0.09486399)
-body_offset = Transform3D(51.015076, 15.249512, -998.5814, -9.1552734e-05, 999.88354, 15.269409, 998.69775, -0.77871704, 51.009323, 94.72943, -1.4475098, -4.838867)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.0780516e-08, -9.986502e-07, 0.09486399)
+body_offset = Transform3D(51.015095, 15.24939, -998.5814, -9.1552734e-05, 999.88336, 15.269318, 998.69806, -0.7790718, 51.009216, 94.72943, -1.4475098, -4.838867)
 bone_name = "RightShoulder_015"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 180.0
@@ -3603,10 +3603,10 @@ transform = Transform3D(0.0010000002, 2.910383e-11, -2.910383e-11, 2.910383e-11,
 shape = SubResource("CapsuleShape3D_us5qj")
 
 [node name="Physical Bone RightArm_016" type="PhysicalBone3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/fbx_merge_fbx/Object_2/RootNode/Root/Object_5/Skeleton3D/PhysicalBoneSimulator3D" unique_id=1622428874]
-transform = Transform3D(-960.754, -97.91667, 259.5456, 49.80514, -981.315, -185.85019, 272.8938, -165.62962, 947.67914, -296.10666, -72.41826, 1149.0549)
+transform = Transform3D(-730.6726, 484.23434, 481.28418, 305.4959, -398.53842, 864.77704, 610.56494, 778.89935, 143.26955, -192.78075, -532.5809, 1338.6014)
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5334475e-07, 8.187944e-08, 0.1755973)
-body_offset = Transform3D(0.00055217743, 0.00012207031, -999.99994, -0.00022888184, 1000.0002, 0.00022888184, 999.9999, 0.00033569336, 0.0005760193, 175.59729, -0.00012207031, -0.0008544922)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.473162e-07, 7.384126e-08, 0.17559728)
+body_offset = Transform3D(0.00048828125, 0.00018310547, -1000, -0.00022125244, 999.9999, 0.0002746582, 999.9999, 0.00032043457, 0.00061035156, 175.59727, -0.00012207031, -0.0008544922)
 bone_name = "RightArm_016"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 180.0
@@ -3619,10 +3619,10 @@ transform = Transform3D(0.0010000002, 4.292815e-10, 3.783498e-10, -1.7462298e-10
 shape = SubResource("CapsuleShape3D_xtb48")
 
 [node name="Physical Bone RightForeArm_017" type="PhysicalBone3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/fbx_merge_fbx/Object_2/RootNode/Root/Object_5/Skeleton3D/PhysicalBoneSimulator3D" unique_id=1042205841]
-transform = Transform3D(127.166725, 980.6647, 148.7461, -208.06209, -120.253685, 970.6952, 969.8137, -154.38857, 188.74689, -360.0878, -159.8973, 959.2903)
+transform = Transform3D(674.879, 736.3061, 48.904182, 64.14132, -124.5535, 990.13745, 735.13544, -665.0863, -131.2862, -283.34424, -806.95123, 1329.6886)
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0099765e-06, -5.952262e-07, 0.12373971)
-body_offset = Transform3D(-0.0021972656, -0.00088500977, -999.999, -0.00016975403, 999.9988, -0.0008621216, 999.99884, 0.00013923645, -0.002243042, 123.73959, 0.0007019043, -0.0007324219)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.91095e-07, -5.562119e-07, 0.12373976)
+body_offset = Transform3D(-0.002193451, -0.00090026855, -999.99896, -0.000187397, 999.99915, -0.00093078613, 999.9991, -5.38826e-05, -0.002090454, 123.739624, 0.0006713867, -0.0007324219)
 bone_name = "RightForeArm_017"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 180.0
@@ -3635,10 +3635,10 @@ transform = Transform3D(0.0010000009, 0, -5.456968e-12, -9.640644e-11, -1.600710
 shape = SubResource("CapsuleShape3D_f78au")
 
 [node name="Physical Bone RightHand_018" type="PhysicalBone3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/fbx_merge_fbx/Object_2/RootNode/Root/Object_5/Skeleton3D/PhysicalBoneSimulator3D" unique_id=350804799]
-transform = Transform3D(-16.879044, 592.7216, -805.2305, 968.94183, 208.4133, 133.10008, 246.71204, -777.9749, -577.83057, -358.1093, -283.38443, 950.5586)
+transform = Transform3D(451.81348, 676.546, -581.5067, 850.30005, -523.7966, 51.25393, -269.91556, -517.6123, -811.9255, -274.67273, -930.7751, 1366.4863)
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.739306e-07, -3.8994476e-06, 0.025313834)
-body_offset = Transform3D(-997.99774, -11.899429, -62.107758, 3.0517578e-05, 982.13574, -188.16827, 63.23745, -187.79193, -980.17, 1.571167, 4.76709, 24.811188)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1026859e-06, -3.8556755e-06, 0.025313891)
+body_offset = Transform3D(-997.9977, -11.899384, -62.107834, 0, 982.1358, -188.1683, 63.23748, -187.79195, -980.17053, 1.5710449, 4.7670593, 24.81128)
 bone_name = "RightHand_018"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 180.0
@@ -3652,10 +3652,10 @@ shape = SubResource("CapsuleShape3D_5ncdm")
 disabled = true
 
 [node name="Physical Bone RightHandThumb1_019" type="PhysicalBone3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/fbx_merge_fbx/Object_2/RootNode/Root/Object_5/Skeleton3D/PhysicalBoneSimulator3D" unique_id=118836794]
-transform = Transform3D(519.5271, 691.7061, -501.63147, 728.13214, -51.18922, 683.52264, 447.11877, -720.3625, -530.2477, -322.34625, -307.72287, 981.4501)
+transform = Transform3D(637.5505, 703.10486, -314.91718, 735.5628, -433.9911, 520.19135, 229.0778, -563.2896, -793.869, -250.29985, -948.02905, 1411.3884)
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.550813e-08, 7.723597e-09, 0.030677147)
-body_offset = Transform3D(-0.0056762695, -0.0005531311, -999.99927, -5.340576e-05, 999.99896, -0.00025177002, 999.99927, -0.0001296997, -0.0054626465, 30.677124, 0, 0.00012207031)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.9551013e-08, 5.1490665e-09, 0.030677147)
+body_offset = Transform3D(-0.0056762695, -0.00048828125, -999.99927, -9.1552734e-05, 999.99915, -0.00016784668, 999.99915, -6.1035156e-05, -0.00592041, 30.677124, 0, 0.00012207031)
 bone_name = "RightHandThumb1_019"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 180.0
@@ -3669,10 +3669,10 @@ shape = SubResource("CapsuleShape3D_mxyu1")
 disabled = true
 
 [node name="Physical Bone RightHandThumb2_020" type="PhysicalBone3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/fbx_merge_fbx/Object_2/RootNode/Root/Object_5/Skeleton3D/PhysicalBoneSimulator3D" unique_id=1108786714]
-transform = Transform3D(775.6898, 630.7719, -20.786047, 5.6294155, 26.018911, 999.6455, 631.0892, -775.53186, 16.63173, -306.63095, -344.40155, 997.4551)
+transform = Transform3D(618.4384, 707.513, -341.99298, 744.475, -388.17297, 543.2115, 251.57677, -590.5481, -766.78674, -235.26436, -972.5241, 1447.7926)
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.173176e-08, -1.09580384e-07, 0.015715834)
-body_offset = Transform3D(0.005858898, -0.008666992, -999.9992, -0.00051912665, 999.99915, -0.008562088, 999.99915, 0.000109896064, 0.005902767, 15.71582, 0.00024414063, -6.1035156e-05)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4301912e-08, -1.1032976e-07, 0.015715834)
+body_offset = Transform3D(0.0058898926, -0.008666992, -999.9992, -0.0005187988, 999.99915, -0.008514404, 999.99927, 0.0004272461, 0.005584717, 15.71582, 0.00024414063, -0.00012207031)
 bone_name = "RightHandThumb2_020"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 180.0
@@ -3686,10 +3686,10 @@ shape = SubResource("CapsuleShape3D_3fsw7")
 disabled = true
 
 [node name="Physical Bone RightHandIndex1_022" type="PhysicalBone3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/fbx_merge_fbx/Object_2/RootNode/Root/Object_5/Skeleton3D/PhysicalBoneSimulator3D" unique_id=1813012955]
-transform = Transform3D(757.8201, 549.3992, 351.9504, -213.89499, -300.41766, 929.51495, 616.40686, -779.68555, -110.14883, -365.27347, -412.76404, 951.074)
+transform = Transform3D(749.3357, 327.02902, 575.802, 68.32827, -903.0856, 423.99014, 658.6555, -278.36743, -699.0596, -342.48035, -1020.3428, 1430.8605)
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.905759e-07, -8.877078e-08, 0.01619789)
-body_offset = Transform3D(-0.010574341, 0.016906738, -999.99915, -7.6293945e-06, 999.99915, 0.016784668, 999.99896, -0.0002593994, -0.010604858, 16.197876, -0.00018310547, -0.0005187988)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.6422876e-07, -9.321963e-08, 0.016197888)
+body_offset = Transform3D(-0.010557175, 0.016906738, -999.99927, -1.1444092e-05, 999.99915, 0.017059326, 999.9993, -0.00025558472, -0.01086235, 16.197876, -0.00018310547, -0.00048828125)
 bone_name = "RightHandIndex1_022"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 180.0
@@ -3703,10 +3703,10 @@ shape = SubResource("CapsuleShape3D_1nid1")
 disabled = true
 
 [node name="Physical Bone RightHandIndex2_023" type="PhysicalBone3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/fbx_merge_fbx/Object_2/RootNode/Root/Object_5/Skeleton3D/PhysicalBoneSimulator3D" unique_id=41191783]
-transform = Transform3D(843.68494, 495.79962, -205.86029, -51.05001, 455.82596, 888.6037, 534.4059, -739.1923, 409.88403, -367.9767, -440.6785, 946.96375)
+transform = Transform3D(862.62463, 484.29688, 146.06577, 78.06173, -412.74655, 907.49475, 499.78503, -771.4252, -393.85043, -353.89722, -1040.3219, 1447.9099)
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4731114e-05, 1.7679748e-05, 0.014459097)
-body_offset = Transform3D(2.4207687, -1.1806946, -999.9956, -1.4164219, 999.99756, -1.1839294, 999.995, 1.4189663, 2.4192734, 14.459137, -0.00061035156, -0.0002746582)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.47592e-05, 1.767982e-05, 0.014459191)
+body_offset = Transform3D(2.4207916, -1.1806641, -999.9955, -1.416439, 999.99756, -1.1839294, 999.99524, 1.4188843, 2.4190903, 14.4592285, -0.00061035156, -0.00024414063)
 bone_name = "RightHandIndex2_023"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 180.0
@@ -3720,10 +3720,10 @@ shape = SubResource("CapsuleShape3D_fyb12")
 disabled = true
 
 [node name="Physical Bone RightHandMiddle1_025" type="PhysicalBone3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/fbx_merge_fbx/Object_2/RootNode/Root/Object_5/Skeleton3D/PhysicalBoneSimulator3D" unique_id=1091838087]
-transform = Transform3D(620.3382, 737.8275, 266.06586, -133.82513, -234.68306, 962.816, 772.8333, -632.87787, -46.84303, -386.80878, -419.59845, 929.95624)
+transform = Transform3D(478.20486, 559.77106, 676.73956, 174.20609, -815.70294, 551.6166, 860.79755, -145.89355, -487.58868, -365.37936, -1030.3376, 1406.3342)
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.442699e-07, 2.0454176e-07, 0.01778261)
-body_offset = Transform3D(-0.0018920898, -0.0012207031, -999.9991, -0.00018119812, 999.99896, -0.0012054443, 999.999, -0.00016021729, -0.0019073486, 17.782593, -0.00018310547, -0.00061035156)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.096463e-07, 2.037277e-07, 0.017782608)
+body_offset = Transform3D(-0.001914978, -0.0011901855, -999.99915, -0.0001373291, 999.999, -0.001159668, 999.99945, -6.1035156e-05, -0.0021514893, 17.782593, -0.00018310547, -0.0006713867)
 bone_name = "RightHandMiddle1_025"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 180.0
@@ -3737,10 +3737,10 @@ shape = SubResource("CapsuleShape3D_oscyj")
 disabled = true
 
 [node name="Physical Bone RightHandMiddle2_026" type="PhysicalBone3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/fbx_merge_fbx/Object_2/RootNode/Root/Object_5/Skeleton3D/PhysicalBoneSimulator3D" unique_id=595152442]
-transform = Transform3D(654.3243, 584.5789, -479.71585, -145.74583, 719.9579, 678.5416, 742.0364, -374.06964, 556.2859, -384.11328, -447.22516, 922.1779)
+transform = Transform3D(505.42697, 831.30023, 231.26485, 132.90724, -339.82227, 931.0512, 852.5721, -439.84167, -282.24115, -380.99374, -1054.5609, 1419.3752)
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.265586e-07, -1.0468074e-07, 0.015480879)
-body_offset = Transform3D(-6.866455e-05, -0.005340576, -999.99915, -0.0002670288, 999.99915, -0.005065918, 999.9991, 2.2888184e-05, 0.000289917, 15.4808655, 0.00018310547, 0.00012207031)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2195228e-07, -1.6240904e-07, 0.015480848)
+body_offset = Transform3D(-6.1035156e-05, -0.0053100586, -999.99915, -0.00020980835, 999.9991, -0.005279541, 999.99927, 5.340576e-05, -7.6293945e-06, 15.480835, 0.00024414063, 0.00012207031)
 bone_name = "RightHandMiddle2_026"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 180.0
@@ -3754,10 +3754,10 @@ shape = SubResource("CapsuleShape3D_dnsdx")
 disabled = true
 
 [node name="Physical Bone RightHandRing1_028" type="PhysicalBone3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/fbx_merge_fbx/Object_2/RootNode/Root/Object_5/Skeleton3D/PhysicalBoneSimulator3D" unique_id=2137402027]
-transform = Transform3D(621.41565, 775.74603, -109.820366, -184.91844, 281.4292, 941.5958, 761.346, -564.8145, 318.3343, -397.0171, -413.88898, 899.2525)
+transform = Transform3D(359.20187, 784.5892, 505.36493, 28.797749, -550.5654, 834.29504, 932.81537, -285.12698, -220.35857, -372.59402, -1039.4231, 1373.5808)
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.795746e-07, -2.8355888e-07, 0.019676622)
-body_offset = Transform3D(-0.00050354004, -0.0012817383, -999.99915, -0.00048828125, 999.99915, -0.0010986328, 999.9992, 8.773804e-05, -0.00044250488, 19.676605, 0.00030517578, 0.00048828125)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.788239e-07, -3.4339328e-07, 0.019676533)
+body_offset = Transform3D(-0.0005016327, -0.0012207031, -999.999, -0.00047969818, 999.99896, -0.001159668, 999.9994, 0.0002975464, -0.00048065186, 19.676514, 0.00036621094, 0.00048828125)
 bone_name = "RightHandRing1_028"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 180.0
@@ -3771,10 +3771,10 @@ shape = SubResource("CapsuleShape3D_118du")
 disabled = true
 
 [node name="Physical Bone RightHandRing2_029" type="PhysicalBone3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/fbx_merge_fbx/Object_2/RootNode/Root/Object_5/Skeleton3D/PhysicalBoneSimulator3D" unique_id=1113272852]
-transform = Transform3D(732.97284, -652.3754, -192.76181, 395.63538, 178.30948, 900.9319, -553.3746, -736.6221, 388.79877, -392.0604, -445.48642, 887.34827)
+transform = Transform3D(801.22363, -389.41345, 454.31012, -494.41705, -3.1937935, 869.21893, -337.0346, -921.05743, -195.09164, -389.12924, -1068.449, 1380.7467)
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1873835e-08, -6.1727384e-08, 0.014506116)
-body_offset = Transform3D(-0.002319336, 0.0022125244, -999.99915, -7.6293945e-05, 999.999, 0.0021514893, 999.99915, 0.00031280518, -0.0021972656, 14.5061035, 3.0517578e-05, 0)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.36446e-08, -3.0818963e-08, 0.014506116)
+body_offset = Transform3D(-0.002319336, 0.0022287369, -999.9991, -1.5497208e-06, 999.99927, 0.002124548, 999.99896, 0.00021862984, -0.002319336, 14.5061035, 0, 0)
 bone_name = "RightHandRing2_029"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 180.0
@@ -3788,10 +3788,10 @@ shape = SubResource("CapsuleShape3D_r6vye")
 disabled = true
 
 [node name="Physical Bone RightHandPinky1_031" type="PhysicalBone3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/fbx_merge_fbx/Object_2/RootNode/Root/Object_5/Skeleton3D/PhysicalBoneSimulator3D" unique_id=1953893190]
-transform = Transform3D(898.8052, -341.3372, -275.02396, 395.38312, 360.39307, 844.8603, -189.2655, -868.1047, 458.88208, -401.4002, -393.97232, 878.5079)
+transform = Transform3D(835.2078, -33.15715, 548.93396, -549.4064, -6.5776153, 835.52936, -24.093096, -999.42847, -23.710426, -368.03506, -1034.781, 1344.3635)
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1338282e-06, -2.1285202e-06, 0.015800487)
-body_offset = Transform3D(0.0019836426, -0.0005493164, -999.99927, -0.002609253, 999.99915, -0.00048828125, 999.999, 0.0027313232, 0.0022277832, 15.800476, 0.0021362305, 0.0010986328)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1638647e-06, -1.943124e-06, 0.015800552)
+body_offset = Transform3D(0.0019836426, -0.00054740906, -999.999, -0.0026049614, 999.99927, -0.00063323975, 999.99884, 0.0026378632, 0.0021972656, 15.800537, 0.001953125, 0.0011291504)
 bone_name = "RightHandPinky1_031"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 180.0
@@ -3805,10 +3805,10 @@ shape = SubResource("CapsuleShape3D_ul64k")
 disabled = true
 
 [node name="Physical Bone RightHandPinky2_032" type="PhysicalBone3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/fbx_merge_fbx/Object_2/RootNode/Root/Object_5/Skeleton3D/PhysicalBoneSimulator3D" unique_id=799622151]
-transform = Transform3D(375.60666, -577.37244, -724.95557, 865.4642, 498.31284, 51.536922, 331.4987, -646.78076, 686.8648, -386.60703, -408.0679, 861.35956)
+transform = Transform3D(957.8927, -39.680576, 284.37112, -277.38156, 127.947266, 952.20215, -74.16844, -990.98676, 111.5531, -380.80893, -1061.7067, 1343.1323)
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5484187e-07, -2.5469558e-07, 0.0144107165)
-body_offset = Transform3D(7.247925e-05, 0.0010414124, -999.99927, 6.1035156e-05, 999.99915, 0.0007324219, 999.9992, 0.00015258789, 0.00015640259, 14.410706, 0.00024414063, 0.00015258789)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2690799e-07, -3.7929453e-07, 0.014410596)
+body_offset = Transform3D(9.1552734e-05, 0.0010528564, -999.99915, 7.247925e-05, 999.9994, 0.00090789795, 999.9989, 1.1444092e-05, 0.00033569336, 14.4105835, 0.00036621094, 0.00012207031)
 bone_name = "RightHandPinky2_032"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 180.0
@@ -3822,10 +3822,10 @@ shape = SubResource("CapsuleShape3D_ujrmm")
 disabled = true
 
 [node name="Physical Bone LeftShoulder_034" type="PhysicalBone3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/fbx_merge_fbx/Object_2/RootNode/Root/Object_5/Skeleton3D/PhysicalBoneSimulator3D" unique_id=168645959]
-transform = Transform3D(-303.61752, -106.33231, -946.842, -425.11005, 904.4746, 34.742847, 852.70026, 413.06064, -319.8173, 42.285355, -233.00381, 1295.8546)
+transform = Transform3D(-179.90831, -895.154, -407.83847, -509.86115, 439.42123, -739.56104, 841.23395, 74.88782, -535.4598, 96.21676, -138.24516, 1395.9031)
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6181882e-07, 2.4240308e-09, 0.09486437)
-body_offset = Transform3D(51.011574, -15.248425, -998.5816, 0.00012207031, 999.8837, -15.268408, 998.698, 0.7786255, 51.005646, 94.72983, 1.4484253, -4.838257)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7916546e-07, 7.0058377e-09, 0.09486438)
+body_offset = Transform3D(51.011566, -15.248444, -998.58167, 0.00012207031, 999.8835, -15.268494, 998.6981, 0.7788391, 51.005585, 94.72986, 1.4484291, -4.838135)
 bone_name = "LeftShoulder_034"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 180.0
@@ -3838,10 +3838,10 @@ transform = Transform3D(0.0010000002, -1.555236e-10, 2.910383e-11, 5.2386895e-10
 shape = SubResource("CapsuleShape3D_kr53x")
 
 [node name="Physical Bone LeftArm_035" type="PhysicalBone3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/fbx_merge_fbx/Object_2/RootNode/Root/Object_5/Skeleton3D/PhysicalBoneSimulator3D" unique_id=1427122378]
-transform = Transform3D(745.2842, 447.22583, -494.51035, -500.14743, 865.4571, 28.923176, 440.9127, 225.77211, 868.6903, 218.94641, -241.37987, 1173.6545)
+transform = Transform3D(691.0429, -708.058, -145.30482, -186.9018, 19.151066, -982.19183, 698.23157, 705.8945, -119.10309, 160.42424, 104.38453, 1467.6166)
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.3125683e-06, -7.6532314e-07, 0.17559914)
-body_offset = Transform3D(-8.392334e-05, -0.0002784729, -999.99976, -6.1035156e-05, 1000.0001, -0.00016021729, 999.9988, -0.00024414063, -0.00011920929, 175.59912, 0.00079345703, 0.004333496)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.3838177e-06, -6.4534095e-07, 0.17559916)
+body_offset = Transform3D(-0.00012207031, -0.00029945374, -999.99994, -0.00015473366, 1000.0002, -0.00049591064, 999.999, 7.1525574e-06, -6.1035156e-05, 175.59915, 0.0007324219, 0.0043945313)
 bone_name = "LeftArm_035"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 180.0
@@ -3854,10 +3854,10 @@ transform = Transform3D(0.0010000002, 2.1736923e-10, 0, 1.4551915e-10, -2.055458
 shape = SubResource("CapsuleShape3D_fcyai")
 
 [node name="Physical Bone LeftForeArm_036" type="PhysicalBone3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/fbx_merge_fbx/Object_2/RootNode/Root/Object_5/Skeleton3D/PhysicalBoneSimulator3D" unique_id=1971248321]
-transform = Transform3D(778.12085, 394.3602, 488.88434, -588.0408, 183.81229, 787.6681, 220.762, -900.3849, 374.92807, 245.27928, -343.92593, 974.7211)
+transform = Transform3D(940.88306, -28.155956, -337.55914, 43.246216, 998.3691, 37.26635, 335.95935, -49.66143, 940.5663, 227.70708, 272.2403, 1372.1377)
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5105437e-08, -3.7102403e-08, 0.123743504)
-body_offset = Transform3D(0.00039672852, -0.00079345703, -999.99994, 6.866455e-05, 999.9995, -0.0006866455, 999.9988, 0.00025177002, -0.00012207031, 123.7435, 0.00012207031, 0)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.1215394e-08, -5.5358726e-08, 0.12374352)
+body_offset = Transform3D(0.00042939186, -0.00078964233, -1000, 6.866455e-05, 999.9998, -0.000415802, 999.9993, 0.00024032593, -0.00033307076, 123.74353, 0.00010681152, 0)
 bone_name = "LeftForeArm_036"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 180.0
@@ -3870,10 +3870,10 @@ transform = Transform3D(0.0010000002, 1.7462298e-10, 1.3096724e-10, 9.458745e-11
 shape = SubResource("CapsuleShape3D_himce")
 
 [node name="Physical Bone LeftHand_037" type="PhysicalBone3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/fbx_merge_fbx/Object_2/RootNode/Root/Object_5/Skeleton3D/PhysicalBoneSimulator3D" unique_id=2105439476]
-transform = Transform3D(229.153, 360.59665, 904.1344, 947.5185, -295.36325, -122.348755, 222.92952, 884.72064, -409.35538, 161.89915, -438.298, 938.68646)
+transform = Transform3D(-476.52487, 571.01086, 668.4839, 117.24944, -712.29675, 692.01587, 871.3074, 408.14212, 272.4764, 252.55821, 250.11436, 1248.852)
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.952338e-08, 4.4796616e-07, 0.025309836)
-body_offset = Transform3D(-997.99945, 11.898621, -62.09552, -0.0002746582, 982.1295, 188.20168, 63.225113, 187.8258, -980.165, 1.5715332, -4.763794, 24.80774)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.9278834e-08, 4.461035e-07, 0.02530983)
+body_offset = Transform3D(-997.99945, 11.899406, -62.095146, -0.000289917, 982.12976, 188.20181, 63.225098, 187.82584, -980.1653, 1.5715332, -4.763794, 24.80774)
 bone_name = "LeftHand_037"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 180.0
@@ -3887,10 +3887,10 @@ shape = SubResource("CapsuleShape3D_6op8g")
 disabled = true
 
 [node name="Physical Bone LeftHandThumb1_038" type="PhysicalBone3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/fbx_merge_fbx/Object_2/RootNode/Root/Object_5/Skeleton3D/PhysicalBoneSimulator3D" unique_id=1445599828]
-transform = Transform3D(-628.1884, 283.7278, 724.48444, 608.68555, -400.78873, 684.7409, 484.64526, 871.1296, 79.069824, 116.79055, -456.20737, 946.6219)
+transform = Transform3D(-806.9709, 589.4192, 37.18781, -534.46136, -755.61945, 378.66904, 251.29463, 285.69943, 924.7847, 234.49832, 220.98274, 1213.5862)
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.908954e-08, 2.3975165e-08, 0.030677034)
-body_offset = Transform3D(0.0026550293, -0.004333496, -1000, -3.0517578e-05, 999.99927, -0.004760742, 999.9995, 0.0006713867, 0.0033569336, 30.677032, 0.00012207031, -0.00012207031)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0822114e-08, 6.759923e-08, 0.030677008)
+body_offset = Transform3D(0.0026245117, -0.0043029785, -999.9999, -3.0517578e-05, 999.99976, -0.0051879883, 999.9999, 0.00018310547, 0.0030517578, 30.677002, 9.1552734e-05, -0.00011444092)
 bone_name = "LeftHandThumb1_038"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 180.0
@@ -3904,10 +3904,10 @@ shape = SubResource("CapsuleShape3D_5dw3m")
 disabled = true
 
 [node name="Physical Bone LeftHandThumb2_039" type="PhysicalBone3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/fbx_merge_fbx/Object_2/RootNode/Root/Object_5/Skeleton3D/PhysicalBoneSimulator3D" unique_id=919858781]
-transform = Transform3D(-648.26434, 123.68266, 751.3028, 676.1088, -360.30087, 642.6973, 350.18558, 924.6003, 149.94728, 82.75819, -487.31363, 941.83997)
+transform = Transform3D(-885.2233, 455.48984, 94.38451, -407.1288, -856.80585, 316.43286, 225.00113, 241.68713, 943.9077, 231.87418, 204.39314, 1170.3824)
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2527645e-08, -1.6045905e-07, 0.015715806)
-body_offset = Transform3D(-0.0154418945, -0.012664795, -999.9999, -3.0517578e-05, 999.99927, -0.013092041, 999.9994, 0.0005950928, -0.014770508, 15.715805, 0.00036621094, 0.0002746582)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.061087e-08, -1.5470515e-07, 0.015715702)
+body_offset = Transform3D(-0.015457153, -0.0126953125, -999.9999, -3.0517578e-05, 999.9997, -0.013458252, 1000.0001, 0.00015258789, -0.014892578, 15.715698, 0.00036621094, 0.0002746582)
 bone_name = "LeftHandThumb2_039"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 180.0
@@ -3921,10 +3921,10 @@ shape = SubResource("CapsuleShape3D_btfsa")
 disabled = true
 
 [node name="Physical Bone LeftHandIndex1_041" type="PhysicalBone3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/fbx_merge_fbx/Object_2/RootNode/Root/Object_5/Skeleton3D/PhysicalBoneSimulator3D" unique_id=1195150832]
-transform = Transform3D(-696.65063, 543.183, 468.64706, 326.65778, -341.43204, 881.31647, 638.72736, 767.0569, 60.423874, 125.37505, -563.1773, 939.3677)
+transform = Transform3D(-643.7784, 749.2627, -155.41792, -764.2657, -639.6782, 81.913, -38.04309, 171.5144, 984.4468, 312.6381, 209.67328, 1142.1884)
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.0313185e-08, 6.004659e-08, 0.016197445)
-body_offset = Transform3D(0.00088500977, 9.1552734e-05, -1000.00024, 2.2888184e-05, 999.99927, 6.1035156e-05, 999.9997, 0.0005874634, 0.0011901855, 16.197449, -6.1035156e-05, 6.1035156e-05)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.0560234e-08, 1.4025918e-08, 0.016197389)
+body_offset = Transform3D(0.00089263916, 0.00010681152, -999.99994, 9.1552734e-05, 999.9997, -0.0008659363, 999.99976, 0.00030517578, 0.0012054443, 16.197388, 0, 6.1035156e-05)
 bone_name = "LeftHandIndex1_041"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 180.0
@@ -3938,10 +3938,10 @@ shape = SubResource("CapsuleShape3D_ej0ax")
 disabled = true
 
 [node name="Physical Bone LeftHandIndex2_042" type="PhysicalBone3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/fbx_merge_fbx/Object_2/RootNode/Root/Object_5/Skeleton3D/PhysicalBoneSimulator3D" unique_id=1570233073]
-transform = Transform3D(-584.71716, 470.68472, 660.728, 228.20561, -686.1452, 690.7437, 778.4779, 554.67163, 293.788, 108.23048, -587.4402, 934.14105)
+transform = Transform3D(-479.85748, 801.8154, 356.1301, -876.17316, -416.97513, -241.76886, -45.356606, -428.04623, 902.6179, 310.00626, 211.8422, 1113.1914)
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.6186985e-08, 2.006122e-07, 0.014458743)
-body_offset = Transform3D(0.004196167, -0.004547119, -999.99994, 1.5258789e-05, 999.99927, -0.005432129, 999.9996, 0.00039672852, 0.0045776367, 14.45874, -0.00012207031, 0)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.530445e-08, 1.9741303e-07, 0.014458749)
+body_offset = Transform3D(0.004211426, -0.0045394897, -999.99945, 0, 1000.0002, -0.0052108765, 1000, 0.00021362305, 0.0045166016, 14.45874, -0.00012207031, 0)
 bone_name = "LeftHandIndex2_042"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 180.0
@@ -3955,10 +3955,10 @@ shape = SubResource("CapsuleShape3D_0jljr")
 disabled = true
 
 [node name="Physical Bone LeftHandMiddle1_044" type="PhysicalBone3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/fbx_merge_fbx/Object_2/RootNode/Root/Object_5/Skeleton3D/PhysicalBoneSimulator3D" unique_id=492600140]
-transform = Transform3D(-734.4619, 628.3888, 256.3068, 193.04051, -168.62685, 966.5921, 650.6159, 759.4027, 2.5455146, 152.15215, -577.9874, 925.1163)
+transform = Transform3D(-544.6197, 753.7841, -367.6938, -832.04565, -540.6626, 124.031425, -105.30537, 373.48798, 921.6384, 339.7545, 228.84645, 1141.0996)
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.249286e-07, 5.392947e-07, 0.017782925)
-body_offset = Transform3D(0.0019073486, -0.0033569336, -1000.0002, 1.1444092e-05, 999.9992, -0.0028686523, 999.9997, 0.00051498413, 0.001876831, 17.782928, -0.00048828125, 9.1552734e-05)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2764191e-07, 4.9983134e-07, 0.017782895)
+body_offset = Transform3D(0.0018920898, -0.0033187866, -1000.0001, 3.0517578e-05, 999.9994, -0.004081726, 999.99994, 0.00045776367, 0.002029419, 17.782898, -0.0004272461, 9.1552734e-05)
 bone_name = "LeftHandMiddle1_044"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 180.0
@@ -3972,10 +3972,10 @@ shape = SubResource("CapsuleShape3D_hbd4i")
 disabled = true
 
 [node name="Physical Bone LeftHandMiddle2_045" type="PhysicalBone3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/fbx_merge_fbx/Object_2/RootNode/Root/Object_5/Skeleton3D/PhysicalBoneSimulator3D" unique_id=980956829]
-transform = Transform3D(-728.7648, 271.58984, 628.60223, 42.018974, -898.5174, 436.922, 683.4737, 344.82663, 643.39594, 137.86311, -601.9401, 915.11145)
+transform = Transform3D(-465.21082, 695.2612, 547.8965, -848.8222, -174.75945, -498.95883, -251.15665, -697.18787, 671.4532, 337.81155, 234.3645, 1114.3158)
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1747978e-07, 3.2408587e-07, 0.015480563)
-body_offset = Transform3D(0.014873505, -0.00012207031, -999.9999, 0.030670166, 999.99963, -0.0012207031, 999.99976, -0.030227661, 0.015140533, 15.48056, -0.00030517578, 0.00018310547)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.202563e-07, 3.0377123e-07, 0.015480598)
+body_offset = Transform3D(0.014831543, -3.8146973e-05, -999.99945, 0.030654907, 1000.00037, 9.1552734e-05, 999.9999, -0.030548096, 0.015319824, 15.480591, -0.00030517578, 0.00018310547)
 bone_name = "LeftHandMiddle2_045"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 180.0
@@ -3989,10 +3989,10 @@ shape = SubResource("CapsuleShape3D_m3oae")
 disabled = true
 
 [node name="Physical Bone LeftHandRing1_047" type="PhysicalBone3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/fbx_merge_fbx/Object_2/RootNode/Root/Object_5/Skeleton3D/PhysicalBoneSimulator3D" unique_id=276930886]
-transform = Transform3D(-712.27966, 689.6956, -130.29776, -58.17171, 126.99204, 990.1964, 699.48096, 712.87646, -50.333076, 181.72038, -579.59644, 906.25287)
+transform = Transform3D(-340.81552, 672.05316, -657.411, -923.03955, -371.93228, 98.30681, -178.44495, 640.32086, 747.09204, 358.91354, 255.81924, 1147.7333)
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1998812e-06, 1.0948675e-06, 0.019678164)
-body_offset = Transform3D(0.0066223145, -0.007156372, -999.9998, -0.00011873245, 999.9992, -0.006011963, 999.99963, 0.00036478043, 0.006336212, 19.678162, -0.0009765625, 0.0020751953)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2040101e-06, 1.1823265e-06, 0.019678222)
+body_offset = Transform3D(0.0066375732, -0.0071907043, -1000.0002, -9.1552734e-05, 999.9992, -0.0073547363, 999.99994, 0.0004272461, 0.0065460205, 19.678223, -0.0010375977, 0.0020751953)
 bone_name = "LeftHandRing1_047"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 180.0
@@ -4006,10 +4006,10 @@ shape = SubResource("CapsuleShape3D_3wa4o")
 disabled = true
 
 [node name="Physical Bone LeftHandRing2_048" type="PhysicalBone3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/fbx_merge_fbx/Object_2/RootNode/Root/Object_5/Skeleton3D/PhysicalBoneSimulator3D" unique_id=1746192516]
-transform = Transform3D(-661.27606, -738.6891, 130.58482, 311.80353, -112.33922, 943.48206, -682.2701, 664.61896, 304.61313, 182.39217, -612.7659, 902.8231)
+transform = Transform3D(-936.6289, -335.7908, -99.85395, 350.2891, -901.6579, -253.5954, -4.8790956, -272.5026, 962.14264, 373.2988, 257.56577, 1119.0773)
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3079579e-07, 4.882854e-07, 0.014506131)
-body_offset = Transform3D(-0.0021362305, -0.01662445, -1000.00024, -2.2888184e-05, 999.99963, -0.016830444, 999.99896, -0.00033569336, -0.0024414063, 14.506134, -0.00024414063, 0.00036621094)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5038468e-07, 4.836366e-07, 0.014506104)
+body_offset = Transform3D(-0.0021362305, -0.01663208, -999.9999, -3.0517578e-05, 999.9999, -0.01651001, 999.9997, -0.00033569336, -0.0010910034, 14.5061035, -0.00024414063, 0.00036621094)
 bone_name = "LeftHandRing2_048"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 180.0
@@ -4023,10 +4023,10 @@ shape = SubResource("CapsuleShape3D_o6twh")
 disabled = true
 
 [node name="Physical Bone LeftHandPinky1_050" type="PhysicalBone3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/fbx_merge_fbx/Object_2/RootNode/Root/Object_5/Skeleton3D/PhysicalBoneSimulator3D" unique_id=1788028446]
-transform = Transform3D(-779.7031, -608.9695, -145.66803, 37.378017, -277.49356, 960.00006, -625.0327, 743.0703, 239.12465, 195.26974, -564.25073, 883.09143)
+transform = Transform3D(-835.53876, -108.427284, -538.6265, 203.5285, -971.6723, -120.12063, -510.34412, -209.99127, 833.93787, 354.1241, 284.04913, 1156.6963)
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1673591e-07, 3.0372863e-07, 0.015802642)
-body_offset = Transform3D(0.0050964355, 0.00033569336, -1000.00006, 0.003704071, 999.9998, 9.1552734e-05, 999.9992, -0.0037822723, 0.0041999817, 15.802643, -0.00030517578, -0.00018310547)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5275574e-08, 3.0288473e-07, 0.01580261)
+body_offset = Transform3D(0.0050735474, 0.00030517578, -1000.00006, 0.003753662, 1000, 0.0001449585, 999.9993, -0.003829956, 0.005558014, 15.802612, -0.00030517578, -0.00018310547)
 bone_name = "LeftHandPinky1_050"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 180.0
@@ -4040,10 +4040,10 @@ shape = SubResource("CapsuleShape3D_eb8mr")
 disabled = true
 
 [node name="Physical Bone LeftHandPinky2_051" type="PhysicalBone3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/fbx_merge_fbx/Object_2/RootNode/Root/Object_5/Skeleton3D/PhysicalBoneSimulator3D" unique_id=1481583089]
-transform = Transform3D(-754.42847, -651.0638, 83.38795, 448.8087, -418.96613, 789.32764, -478.9659, 632.9165, 608.2831, 196.36981, -590.7946, 870.54803)
+transform = Transform3D(-991.5165, -100.00492, 83.030716, 49.045677, -879.41785, -473.51752, 120.37278, -465.4281, 876.86206, 361.43915, 292.77005, 1130.883)
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9348196e-08, 2.0227647e-08, 0.014409116)
-body_offset = Transform3D(0.0012817383, -0.0010375977, -1000.0002, -1.5258789e-05, 999.9997, -0.0014038086, 999.9989, -0.00019836426, 0.0013427734, 14.409119, 0, 0)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3928386e-08, 1.1872749e-08, 0.014409121)
+body_offset = Transform3D(0.0012760162, -0.0010070801, -999.9998, -1.1444092e-05, 1000.0001, -0.0008239746, 999.9999, -0.00039291382, 0.0020256042, 14.409119, 0, -1.5258789e-05)
 bone_name = "LeftHandPinky2_051"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 180.0
@@ -4057,10 +4057,10 @@ shape = SubResource("CapsuleShape3D_ln2kq")
 disabled = true
 
 [node name="Physical Bone Neck_053" type="PhysicalBone3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/fbx_merge_fbx/Object_2/RootNode/Root/Object_5/Skeleton3D/PhysicalBoneSimulator3D" unique_id=958073935]
-transform = Transform3D(269.56635, 946.0639, 179.7137, 758.4153, -323.57385, 565.7793, 593.41406, -16.217453, -804.73395, -55.893105, -182.69556, 1408.359)
+transform = Transform3D(-643.5057, 736.36707, -208.9592, 595.85205, 653.26624, 467.12256, 480.4796, 176.08723, -859.1464, -36.571384, -199.18858, 1456.4869)
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.978827e-09, 2.089482e-08, 0.03693629)
-body_offset = Transform3D(-0.0020446777, -0.00018310547, -999.99976, 0, 999.99994, -0.00015258789, 999.9999, -4.5776367e-05, -0.0019226074, 36.93628, -1.5258789e-05, 6.1035156e-05)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2378075e-08, 2.5403642e-08, 0.03693628)
+body_offset = Transform3D(-0.0020751953, -0.00018310547, -999.99994, 0, 999.99994, -0.0002746582, 999.99994, 6.1035156e-05, -0.0022583008, 36.93628, -1.5258789e-05, 6.1035156e-05)
 friction = 0.5
 bone_name = "Neck_053"
 joint_constraints/swing_span = 45.0

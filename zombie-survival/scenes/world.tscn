@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://cx4838qfjdkyl"]
 
+[ext_resource type="Script" uid="uid://deveupqxvoqel" path="res://scenes/navigation_region_3d.gd" id="1_k0juu"]
 [ext_resource type="Script" uid="uid://sfirvywdtori" path="res://scripts/camera_mount.gd" id="1_nnsk1"]
 [ext_resource type="PackedScene" uid="uid://blmn56ddpj6bt" path="res://scenes/zombie.tscn" id="2_rwgxs"]
-[ext_resource type="PackedScene" uid="uid://j4lrujn00xm8" path="res://scenes/zombie_enemy.tscn" id="3_4wyf3"]
+[ext_resource type="PackedScene" uid="uid://lnvq0v1olyhr" path="res://scenes/zombie_enemy.tscn" id="3_4wyf3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_f3sb7"]
 sky_top_color = Color(0, 0, 0.9019608, 1)
@@ -40,6 +41,7 @@ environment = SubResource("Environment_tlwt5")
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1290171979]
 navigation_mesh = SubResource("NavigationMesh_rwgxs")
+script = ExtResource("1_k0juu")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D" unique_id=1884004330]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.579834, -0.5, 0.3770752)

@@ -3460,8 +3460,8 @@ _data = {
 &"walking": SubResource("Animation_tuyoq")
 }
 
-[node name="Player" type="CharacterBody3D" unique_id=728067684]
-collision_layer = 8
+[node name="Player" type="CharacterBody3D" unique_id=728067684 groups=["player"]]
+collision_layer = 4
 collision_mask = 3
 script = ExtResource("1_g2els")
 

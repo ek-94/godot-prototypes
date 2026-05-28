@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://dk86iphdyvgq5"]
 
-[ext_resource type="Texture2D" uid="uid://c8arnlq67qi7" path="res://assets/textures/grids/Dark/texture_05.png" id="1_sugp2"]
 [ext_resource type="Script" uid="uid://lltwpuynj0d1" path="res://scenes/main.gd" id="1_tbgi4"]
 [ext_resource type="Texture2D" uid="uid://c8upf6osvdwx5" path="res://assets/textures/grids/Orange/texture_05.png" id="2_jyhfs"]
 [ext_resource type="Script" uid="uid://c2cxabe1mc3h" path="res://scenes/mesh_instance_3d.gd" id="2_tefeu"]
 [ext_resource type="PackedScene" uid="uid://buuoqq0neool" path="res://scenes/player.tscn" id="3_tbgi4"]
+[ext_resource type="Script" uid="uid://y0vfgtoxl0a2" path="res://scenes/spawner.gd" id="6_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://qw2tid071oqk" path="res://scenes/shuriken.tscn" id="6_tefeu"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1bvp3"]
@@ -22,10 +22,13 @@ sky = SubResource("Sky_lquwl")
 tonemap_mode = 2
 sdfgi_enabled = true
 glow_enabled = true
+fog_enabled = true
+fog_density = 0.05
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.005
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_272bh"]
-albedo_texture = ExtResource("1_sugp2")
-uv1_triplanar = true
+[sub_resource type="NavigationMesh" id="NavigationMesh_tefeu"]
+geometry_parsed_geometry_type = 0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5vw27"]
 albedo_texture = ExtResource("2_jyhfs")
@@ -36,34 +39,32 @@ script = ExtResource("1_tbgi4")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1496657540]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+light_energy = 0.4
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=100593235]
 environment = SubResource("Environment_7mycd")
 
-[node name="map" type="Node3D" parent="." unique_id=1956915499]
+[node name="navmesh" type="NavigationRegion3D" parent="." unique_id=1150112178]
+navigation_mesh = SubResource("NavigationMesh_tefeu")
+navigation_layers = 3
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="map" unique_id=1191608695]
+[node name="TerrainMesh" type="MeshInstance3D" parent="navmesh" unique_id=1191608695]
+layers = 3
 script = ExtResource("2_tefeu")
 
-[node name="floor" type="CSGBox3D" parent="map" unique_id=2040583165]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.64657354, 0)
-visible = false
-material_override = SubResource("StandardMaterial3D_272bh")
-size = Vector3(1000, 1, 1000)
-
-[node name="box1" type="CSGBox3D" parent="map" unique_id=1484063299]
+[node name="box1" type="CSGBox3D" parent="navmesh" unique_id=1484063299]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8637915, 0.4, 0)
 material_override = SubResource("StandardMaterial3D_5vw27")
 use_collision = true
 
-[node name="box2" type="CSGBox3D" parent="map" unique_id=1517144663]
+[node name="box2" type="CSGBox3D" parent="navmesh" unique_id=1517144663]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1777544, 0.89999974, 1.5049534)
 material_override = SubResource("StandardMaterial3D_5vw27")
 use_collision = true
 size = Vector3(2, 2, 2)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="map" unique_id=912149357]
+[node name="CSGBox3D" type="CSGBox3D" parent="navmesh" unique_id=912149357]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.91318345, 2.3842165, 11.299999)
 use_collision = true
 size = Vector3(14.026367, 5, 1)
@@ -73,3 +74,6 @@ transform = Transform3D(-0.560639, 0, -0.8280603, 0, 1, 0, 0.8280603, 0, -0.5606
 
 [node name="Node3D" parent="." unique_id=1583821364 instance=ExtResource("6_tefeu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7809143, 1.269484, -0.08671999)
+
+[node name="spawner" type="Node3D" parent="." unique_id=206914365]
+script = ExtResource("6_o6xl0")

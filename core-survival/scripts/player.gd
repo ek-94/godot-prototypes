@@ -9,6 +9,7 @@ var grenade_scene: PackedScene = preload("res://scenes/ball.tscn")
 var shuriken_scene: PackedScene = preload("res://scenes/shuriken.tscn")
 
 var SPEED = 3.0
+var health = 100
 
 var walk_speed = 3.0
 var sprint_speed = 7
@@ -21,7 +22,10 @@ var sens = 0.2
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	
+
+func take_damage(dmg):
+	health -= dmg
+	print(health)
 func _input(event):
 	if event is InputEventMouseMotion:
 		rotate_y(deg_to_rad(-event.relative.x * sens))
