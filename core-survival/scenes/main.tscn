@@ -22,10 +22,10 @@ sky = SubResource("Sky_lquwl")
 tonemap_mode = 2
 sdfgi_enabled = true
 glow_enabled = true
-fog_enabled = true
-fog_density = 0.05
-volumetric_fog_enabled = true
+fog_light_color = Color(1, 1, 1, 1)
+fog_density = 0.03
 volumetric_fog_density = 0.005
+volumetric_fog_emission_energy = 0.0
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_tefeu"]
 geometry_parsed_geometry_type = 0
