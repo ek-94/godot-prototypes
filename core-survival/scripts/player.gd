@@ -5,8 +5,12 @@ extends CharacterBody3D
 @onready var visuals: Node3D = $visuals
 @onready var raycast: RayCast3D = $camera_mount/Camera3D/RayCast3D
 @onready var printer: Timer = $printer
+@onready var noise = get_parent().noise
+@onready var terrain_height = get_parent().terrain_height
+
 var grenade_scene: PackedScene = preload("res://scenes/ball.tscn")
 var shuriken_scene: PackedScene = preload("res://scenes/shuriken.tscn")
+var campfire_scene: PackedScene = preload("res://scenes/campfire.tscn")
 
 var SPEED = 3.0
 var health = 100
@@ -26,6 +30,7 @@ func _ready():
 func take_damage(dmg):
 	health -= dmg
 	print(health)
+	
 func _input(event):
 	if event is InputEventMouseMotion:
 		rotate_y(deg_to_rad(-event.relative.x * sens))
@@ -86,6 +91,9 @@ func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("throw_grenade"):
 		throw_grenade()
+		
+	if Input.is_action_just_pressed("build"):
+		spawn_campfire()
 	
 	if Input.is_action_just_pressed("attack"):
 		attack()
@@ -113,7 +121,20 @@ func _physics_process(delta: float) -> void:
 			velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+	
+func spawn_campfire():
+	if raycast.is_colliding():
+		print("colliding")
+		var target = raycast.get_collision_point()
+		var campfire_instance = campfire_scene.instantiate()
+		
+		campfire_instance.global_position = target
+		print("Root scale:", campfire_instance.scale)
 
+		for child in campfire_instance.get_children():
+			print(child.name, child.scale)
+		get_tree().current_scene.add_child(campfire_instance)
+	
 func hit():
 	var hit = raycast.get_collider()
 	if is_instance_valid(hit):

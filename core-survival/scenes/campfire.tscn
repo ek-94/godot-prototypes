@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://b37oguncl0pp8"]
+
+[ext_resource type="PackedScene" uid="uid://bqtdwjsxhvuo3" path="res://assets/models/campfire_wood_survival_warm_and_light.glb" id="1_m47ar"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_m47ar"]
+direction = Vector3(0, 1, 0)
+spread = 24.231
+initial_velocity_min = 1.0
+initial_velocity_max = 3.0
+gravity = Vector3(0, 0.5, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_54scn"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_yfrnb"]
+material = SubResource("StandardMaterial3D_54scn")
+radius = 0.1
+height = 0.2
+
+[node name="Node3D" type="Node3D" unique_id=943535977]
+
+[node name="Sketchfab_Scene" parent="." unique_id=2102403255 instance=ExtResource("1_m47ar")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="." unique_id=1742347971]
+lifetime = 0.75
+process_material = SubResource("ParticleProcessMaterial_m47ar")
+draw_pass_1 = SubResource("SphereMesh_yfrnb")

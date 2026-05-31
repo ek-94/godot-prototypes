@@ -8,8 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://qw2tid071oqk" path="res://scenes/shuriken.tscn" id="6_tefeu"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1bvp3"]
-sky_top_color = Color(0, 0.5686275, 1, 1)
-sky_horizon_color = Color(2.9841065e-06, 0.56779665, 0.7666741, 1)
+sky_top_color = Color(0.95770377, 0.95483917, 0.60208696, 1)
+sky_horizon_color = Color(0.82519287, 0.93716085, 0.99999994, 1)
 ground_horizon_color = Color(0.26644552, 0.7517239, 0.7630501, 1)
 
 [sub_resource type="Sky" id="Sky_lquwl"]
