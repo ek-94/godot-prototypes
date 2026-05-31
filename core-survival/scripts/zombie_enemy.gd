@@ -26,6 +26,8 @@ func take_damage(dmg, pos):
 	get_tree().current_scene.add_child(blood_particles)
 	if health > 0:
 		health -= dmg
+		if health < 50:
+			run_speed = 1
 		if health <= 0:
 			die()
 			
@@ -84,8 +86,12 @@ func _physics_process(delta: float) -> void:
 			if direction.length() > 0:
 				look_at(global_position + direction, Vector3.UP)
 				rotate_y(PI)
-
-			if animation_player.current_animation != "zombie_02_Run":
+			
+			if health < 50:
+				if animation_player.current_animation != "zombie_02_Walk":
+					animation_player.play("zombie_02_Walk")
+				
+			elif animation_player.current_animation != "zombie_02_Run":
 				animation_player.play("zombie_02_Run")
 
 			move_and_slide()
