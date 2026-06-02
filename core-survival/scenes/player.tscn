@@ -3460,6 +3460,22 @@ _data = {
 &"walking": SubResource("Animation_tuyoq")
 }
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g2els"]
+bg_color = Color(0.6, 0.6, 0.6, 0.101960786)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qhqgy"]
+bg_color = Color(1, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
 [node name="Player" type="CharacterBody3D" unique_id=728067684 groups=["player"]]
 collision_layer = 4
 collision_mask = 3
@@ -3976,5 +3992,14 @@ size_flags_horizontal = 4
 texture = ExtResource("2_g2els")
 expand_mode = 1
 stretch_mode = 5
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1862011597]
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 325.0
+offset_bottom = 43.0
+theme_override_styles/background = SubResource("StyleBoxFlat_g2els")
+theme_override_styles/fill = SubResource("StyleBoxFlat_qhqgy")
+show_percentage = false
 
 [connection signal="animation_finished" from="visuals/mixamo_base/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

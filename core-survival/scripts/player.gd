@@ -7,6 +7,7 @@ extends CharacterBody3D
 @onready var printer: Timer = $printer
 @onready var noise = get_parent().noise
 @onready var terrain_height = get_parent().terrain_height
+@onready var health_bar: ProgressBar = $ProgressBar
 
 var grenade_scene: PackedScene = preload("res://scenes/ball.tscn")
 var shuriken_scene: PackedScene = preload("res://scenes/shuriken.tscn")
@@ -26,9 +27,11 @@ var sens = 0.2
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	health_bar.value = 100
 
 func take_damage(dmg):
 	health -= dmg
+	health_bar.value = health
 	print(health)
 	
 func _input(event):
