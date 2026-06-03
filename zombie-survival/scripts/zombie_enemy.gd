@@ -9,9 +9,11 @@ extends CharacterBody3D
 @onready var visuals: Node3D = $visuals
 @onready var physical_bone_simulator_3d: PhysicalBoneSimulator3D = $visuals/Sketchfab_Scene/Sketchfab_model/fbx_merge_fbx/Object_2/RootNode/Root/Object_5/Skeleton3D/PhysicalBoneSimulator3D
 @onready var attack_hitbox: Area3D = $attack_hitbox
+@onready var health_bar: ProgressBar = $ProgressBar
 
 @export var run_speed = 3
 var is_attacking = false
+var health = 100
 
 func _ready():
 	navigation_agent_3d.target_desired_distance = 0.05

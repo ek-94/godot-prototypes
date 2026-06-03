@@ -8,18 +8,20 @@ extends CharacterBody3D
 @onready var animation_player: AnimationPlayer = $visuals/Sketchfab_Scene/AnimationPlayer
 @onready var visuals: Node3D = $visuals
 @onready var physical_bone_simulator_3d: PhysicalBoneSimulator3D = $visuals/Sketchfab_Scene/Sketchfab_model/fbx_merge_fbx/Object_2/RootNode/Root/Object_5/Skeleton3D/PhysicalBoneSimulator3D
+@onready var health_bar: ProgressBar = $ProgressBar
 
 @export var run_speed = 10
 var health = 100
 var is_dead = false
 
 func _ready():
+	health_bar.value = health
 	navigation_agent_3d.target_desired_distance = 0.05
 
 func take_damage(dmg):
 	if health > 0:
 		health -= dmg
-		print(health)
+		health_bar.value = health
 		if health <= 0:
 			die()
 		
