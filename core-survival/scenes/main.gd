@@ -4,6 +4,7 @@ extends Node3D
 @onready var spawner: Node3D = $spawner
 @onready var navmesh: NavigationRegion3D = $navmesh
 @onready var zombie_scene = preload("res://scenes/zombie_enemy.tscn")
+@onready var zombie_girl_scene = preload("res://scenes/zombiegirl.tscn")
 
 var terrain_size = 500
 var terrain_resolution = 100
@@ -28,6 +29,6 @@ func _ready():
 	await get_tree().process_frame
 	
 	navmesh.bake_navigation_mesh()
-	spawner.spawn_enemies(zombie_scene, 20, noise, terrain_height)
+	spawner.spawn_enemies(zombie_girl_scene, 20, noise, terrain_height)
 	
 	
