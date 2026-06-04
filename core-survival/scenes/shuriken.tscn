@@ -54,6 +54,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_aiqbc")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_yvn8i"]
+size = Vector3(0.015, 0.1, 0.1)
+
 [node name="Shuriken6" type="RigidBody3D" unique_id=1005562290]
 collision_layer = 4
 collision_mask = 2
@@ -65,9 +68,17 @@ script = ExtResource("1_jr3c8")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=367832687]
 transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, -3.5527137e-15, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_jr3c8")
+disabled = true
 
 [node name="Shuriken6_Ninja thingz_0" type="MeshInstance3D" parent="." unique_id=1987607440]
 transform = Transform3D(0.04, 0, 0, 0, 0.04, 0, 0, 0, 0.04, 0, 0, 0)
 mesh = SubResource("ArrayMesh_noi1l")
 
+[node name="damage_hitbox" type="Area3D" parent="." unique_id=377925914]
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="damage_hitbox" unique_id=1124301570]
+shape = SubResource("BoxShape3D_yvn8i")
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="area_entered" from="damage_hitbox" to="." method="_on_damage_hitbox_area_entered"]

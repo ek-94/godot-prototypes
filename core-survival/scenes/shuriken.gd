@@ -9,14 +9,12 @@ func _process(delta):
 
 
 func _on_body_entered(body: Node) -> void:
-	print("ok")
-	linear_velocity = Vector3.ZERO
-	angular_velocity = Vector3.ZERO
-	stuck = true
-	freeze = true
-	$CollisionShape3D.disabled = true
-	
-	if body.is_in_group("enemies"):
-		body.take_damage(34, global_position)
-	
-	queue_free()
+	pass
+
+
+func _on_damage_hitbox_area_entered(area: Area3D) -> void:
+	var parent = area.get_parent()
+	print(parent)
+	if parent.is_in_group("enemies"):
+		parent.take_damage(34, global_position)
+		queue_free() # Replace with function body.

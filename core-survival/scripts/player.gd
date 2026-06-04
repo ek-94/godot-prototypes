@@ -16,8 +16,8 @@ var campfire_scene: PackedScene = preload("res://scenes/campfire.tscn")
 var SPEED = 3.0
 var health = 100
 
-var walk_speed = 3.0
-var sprint_speed = 7
+var walk_speed = 2.0
+var sprint_speed = 4.0
 var running = false
 var is_attacking = false
 
