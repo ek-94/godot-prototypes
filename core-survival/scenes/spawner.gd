@@ -19,7 +19,6 @@ func spawn_enemies(scene, amount, noise, terrain_height):
 		# Sample terrain at world coords
 		var y = noise.get_noise_2d(world_x, world_z) * terrain_height
 		
-		print(Vector3(world_x, y + 2, world_z))
 		enemy.global_position = Vector3(world_x, y + 2, world_z)
 		await get_tree().process_frame
 

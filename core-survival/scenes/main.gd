@@ -29,6 +29,6 @@ func _ready():
 	await get_tree().process_frame
 	
 	navmesh.bake_navigation_mesh()
-	spawner.spawn_enemies(zombie_girl_scene, 20, noise, terrain_height)
+	spawner.spawn_enemies(zombie_girl_scene, 5, noise, terrain_height)
 	
 	
