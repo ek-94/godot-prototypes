@@ -23,8 +23,12 @@ func physics_update(delta):
 		var direction = local_destination.normalized()
 		actor.velocity = direction * actor.run_speed
 		
-		
 		if direction.length() > 0:
 			actor.look_at(actor.global_position + direction, Vector3.UP)
 			actor.rotate_y(PI)
-	
+		
+		var bodies = actor.attack_hitbox.get_overlapping_bodies()
+		
+		for body in bodies:
+			if body == actor.player:
+				state_machine.change_state("Attack")

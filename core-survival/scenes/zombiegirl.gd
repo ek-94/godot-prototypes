@@ -8,9 +8,11 @@ extends CharacterBody3D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var navigation_agent_3d: NavigationAgent3D = $NavigationAgent3D
 @onready var damage_collision_box: CollisionShape3D = $damage_hitbox/damage_collision_box
+@onready var attack_hitbox: Area3D = $attack_hitbox
 
 @export var run_speed = 4
 var health = 100
+var attack_dmg = 25
 var is_attacking = false
 var is_dead = false
 var shape
@@ -24,7 +26,10 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 	
 	move_and_slide()
-			
+
+func deal_damage():
+	player.take_damage(attack_dmg)		
+	
 func take_damage(dmg, pos):
 	print("YEEEE")
 	var blood_particles = blood_particles_scene.instantiate()
