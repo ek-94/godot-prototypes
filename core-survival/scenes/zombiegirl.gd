@@ -6,6 +6,7 @@ extends CharacterBody3D
 @onready var col: CollisionShape3D = $CollisionShape3D
 @onready var capsule = $CollisionShape3D.shape as CapsuleShape3D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var state_machine: Node = $StateMachine
 @onready var navigation_agent_3d: NavigationAgent3D = $NavigationAgent3D
 @onready var damage_collision_box: CollisionShape3D = $damage_hitbox/damage_collision_box
 @onready var attack_hitbox: Area3D = $attack_hitbox
@@ -28,7 +29,9 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func deal_damage():
-	player.take_damage(attack_dmg)		
+	var bodies = attack_hitbox.get_overlapping_bodies()
+	if player in bodies:
+		player.take_damage(attack_dmg)		
 	
 func take_damage(dmg, pos):
 	print("YEEEE")
@@ -37,9 +40,8 @@ func take_damage(dmg, pos):
 	get_tree().current_scene.add_child(blood_particles)
 	if health > 0:
 		health -= dmg
-		if health < 50:
-			shape.size = Vector3(0.627,0.4,0.627)
-			run_speed = 4
+		if health < 25:
+			state_machine.change_state("Crawl")
 			
 func _on_navigation_agent_3d_navigation_finished() -> void:
 	velocity = Vector3.ZERO # Replace with function body.
