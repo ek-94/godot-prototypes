@@ -10,6 +10,7 @@ extends CharacterBody3D
 @onready var navigation_agent_3d: NavigationAgent3D = $NavigationAgent3D
 @onready var damage_collision_box: CollisionShape3D = $damage_hitbox/damage_collision_box
 @onready var attack_hitbox: Area3D = $attack_hitbox
+@onready var physical_bone_simulator_3d: PhysicalBoneSimulator3D = $Skeleton3D/PhysicalBoneSimulator3D
 
 @export var run_speed = 4
 var health = 100
@@ -25,9 +26,14 @@ func _ready():
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
+	if !is_dead:
+		move_and_slide()
 	
-	move_and_slide()
-
+func turn_on_ragdoll():
+	col.disabled = true
+	physical_bone_simulator_3d.active = true
+	physical_bone_simulator_3d.physical_bones_start_simulation()
+	
 func deal_damage():
 	var bodies = attack_hitbox.get_overlapping_bodies()
 	if player in bodies:
@@ -40,8 +46,10 @@ func take_damage(dmg, pos):
 	get_tree().current_scene.add_child(blood_particles)
 	if health > 0:
 		health -= dmg
+		if health <= 0:
+			state_machine.change_state("Dead")
 		if health < 25:
-			state_machine.change_state("Crawl")
+			state_machine.change_state("RunningCrawl")
 			
 func _on_navigation_agent_3d_navigation_finished() -> void:
 	velocity = Vector3.ZERO # Replace with function body.

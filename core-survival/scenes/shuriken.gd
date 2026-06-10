@@ -15,5 +15,5 @@ func _on_body_entered(body: Node) -> void:
 func _on_damage_hitbox_area_entered(area: Area3D) -> void:
 	var parent = area.get_parent()
 	if parent.is_in_group("enemies"):
-		parent.take_damage(34, global_position)
+		parent.take_damage(15, global_position)
 		queue_free() # Replace with function body.
