@@ -16,6 +16,7 @@ var is_attacking = false
 var health = 100
 
 func _ready():
+	navigation_agent_3d.set_target_position(randomPos())
 	navigation_agent_3d.target_desired_distance = 0.05
 
 func attack():
@@ -32,28 +33,21 @@ func turn_on_ragdoll():
 		if bone is PhysicalBone3D:
 			bone.linear_velocity = velocity
 			bone.apply_central_impulse(velocity * 0.2)
+func randomPos():
+	return Vector3(
+		randi_range(-10, 10),
+		global_position.y,
+		randi_range(-10, 10)
+	)
 	
 func _physics_process(delta: float) -> void:
-	var bodies = attack_hitbox.get_overlapping_bodies()
-	if !bodies.is_empty():
-		attack()
-		
 	if !is_attacking:
 		if not is_on_floor():
 				velocity += get_gravity() * delta
 
-		var target = player.global_position
-		
-		navigation_agent_3d.set_target_position(target)
 
 		if navigation_agent_3d.is_navigation_finished():
-			velocity = Vector3.ZERO
-			
-			if animation_player.current_animation != "zombie_02_Idle":
-				animation_player.play("zombie_02_Idle")
-			
-			move_and_slide()
-			return
+			navigation_agent_3d.set_target_position(randomPos())
 
 		var destination = navigation_agent_3d.get_next_path_position()
 		var local_destination = destination - global_position

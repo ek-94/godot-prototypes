@@ -13,6 +13,7 @@ extends CharacterBody3D
 @export var run_speed = 10
 var health = 100
 var is_dead = false
+var target 
 
 func _ready():
 	health_bar.value = health
@@ -30,6 +31,7 @@ func die():
 	turn_on_ragdoll()
 	
 func turn_on_ragdoll():
+	velocity = Vector3.ZERO
 	collision.disabled = true
 	animation_player.stop()
 	physical_bone_simulator_3d.physical_bones_start_simulation()
@@ -55,18 +57,25 @@ func _physics_process(delta: float) -> void:
 			var query = PhysicsRayQueryParameters3D.create(ray_origin, ray_end)
 			var result = get_world_3d().direct_space_state.intersect_ray(query)
 			
+			if result.collider is CharacterBody3D:
+				target = result.collider
+			
 			if result:
 				navigation_agent_3d.set_target_position(result.position)
 
 		if navigation_agent_3d.is_navigation_finished():
 			velocity = Vector3.ZERO
+			target = null
 			
 			if animation_player.current_animation != "zombie_02_Idle":
 				animation_player.play("zombie_02_Idle")
 			
 			move_and_slide()
 			return
-
+			
+		if target:
+			navigation_agent_3d.set_target_position(target.global_position)
+			
 		var destination = navigation_agent_3d.get_next_path_position()
 		var local_destination = destination - global_position
 		local_destination.y = 0
