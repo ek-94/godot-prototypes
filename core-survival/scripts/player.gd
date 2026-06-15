@@ -20,6 +20,7 @@ var walk_speed = 2.0
 var sprint_speed = 4.0
 var running = false
 var is_attacking = false
+var knocked_down = false
 
 const JUMP_VELOCITY = 5
 
@@ -32,7 +33,8 @@ func _ready():
 func take_damage(dmg):
 	health -= dmg
 	health_bar.value = health
-	print(health)
+	if health < 10:
+		knock_down()
 	
 func _input(event):
 	if event is InputEventMouseMotion:
@@ -40,6 +42,10 @@ func _input(event):
 		visuals.rotate_y(deg_to_rad(event.relative.x * sens))
 		camera_mount.rotate_x(deg_to_rad(-event.relative.y * sens))
 		
+func knock_down():
+	animation_player.play("knock_down")	
+	knocked_down = true
+	
 func throw_grenade():
 	#var grenade = grenade_scene.instantiate()
 	#get_tree().current_scene.add_child(grenade)
@@ -103,7 +109,7 @@ func _physics_process(delta: float) -> void:
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	if !is_attacking:
+	if !is_attacking && !knocked_down:
 		var input_dir := Input.get_vector("left", "right", "forward", "backwards")
 		var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 		if direction:

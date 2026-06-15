@@ -12,4 +12,8 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	else:
 		for body in bodies:
 			if body == actor.player:
-				actor.animation_player.play("zombie_attack")
+				if body.health > 10:
+					actor.animation_player.play("zombie_attack")
+				else:
+					actor.global_position = body.global_position
+					state_machine.change_state("GroundBite")
