@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://qw2tid071oqk"]
 
-[ext_resource type="Script" uid="uid://cq7tmk21fy8sr" path="res://scenes/shuriken.gd" id="1_jr3c8"]
+[ext_resource type="Script" uid="uid://cq7tmk21fy8sr" path="res://scripts/shuriken.gd" id="1_jr3c8"]
 [ext_resource type="Texture2D" uid="uid://2b54q6qj8pgl" path="res://ninja_equipment_0.png" id="2_yvn8i"]
 [ext_resource type="Texture2D" uid="uid://chs6fttho5ran" path="res://ninja_equipment_1.png" id="3_tacqd"]
 [ext_resource type="Texture2D" uid="uid://b25lkosyri47h" path="res://ninja_equipment_2.png" id="4_c2qga"]

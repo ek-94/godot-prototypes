@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://deveupqxvoqel" path="res://scenes/navigation_region_3d.gd" id="1_k0juu"]
 [ext_resource type="Script" uid="uid://sfirvywdtori" path="res://scripts/camera_mount.gd" id="1_nnsk1"]
-[ext_resource type="PackedScene" uid="uid://blmn56ddpj6bt" path="res://scenes/zombie.tscn" id="2_rwgxs"]
+[ext_resource type="PackedScene" uid="uid://blmn56ddpj6bt" path="res://scenes/player.tscn" id="2_rwgxs"]
 [ext_resource type="PackedScene" uid="uid://lnvq0v1olyhr" path="res://scenes/zombie_enemy.tscn" id="3_4wyf3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_f3sb7"]

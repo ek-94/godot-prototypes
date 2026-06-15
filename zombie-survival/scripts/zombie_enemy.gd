@@ -33,6 +33,7 @@ func turn_on_ragdoll():
 		if bone is PhysicalBone3D:
 			bone.linear_velocity = velocity
 			bone.apply_central_impulse(velocity * 0.2)
+			
 func randomPos():
 	return Vector3(
 		randi_range(-10, 10),
@@ -44,29 +45,8 @@ func _physics_process(delta: float) -> void:
 	if !is_attacking:
 		if not is_on_floor():
 				velocity += get_gravity() * delta
-
-
-		if navigation_agent_3d.is_navigation_finished():
-			navigation_agent_3d.set_target_position(randomPos())
-
-		var destination = navigation_agent_3d.get_next_path_position()
-		var local_destination = destination - global_position
-		local_destination.y = 0
-
-		var direction = local_destination.normalized()
-		velocity = direction * run_speed
+				move_and_slide()
 		
-		
-		if direction.length() > 0:
-			look_at(global_position + direction, Vector3.UP)
-			rotate_y(PI)
-
-		if animation_player.current_animation != "zombie_02_Run":
-			animation_player.play("zombie_02_Run")
-
-		move_and_slide()
-		
-
 
 func _on_navigation_agent_3d_navigation_finished() -> void:
 	print("ok")
