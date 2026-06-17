@@ -1,6 +1,7 @@
 extends CharacterBody3D
 
 @onready var camera = get_parent().find_child("Camera3D")
+@onready var state_machine: Node = $StateMachine
 @onready var player = get_parent().find_child("zombie")
 @onready var collision: CollisionShape3D = $CollisionShape3D
 @onready var mouse_ray : RayCast3D = camera.find_child("raycast_mouse")
@@ -43,60 +44,11 @@ func turn_on_ragdoll():
 			bone.apply_central_impulse(velocity * 0.2)
 	
 func _physics_process(delta: float) -> void:
-	if !is_dead:
 		if not is_on_floor():
 				velocity += get_gravity() * delta
-
-		if Input.is_action_pressed("move"):
-			var mouse_pos = get_viewport().get_mouse_position()
-
-			var ray_origin = camera.project_ray_origin(mouse_pos)
-			var ray_direction = camera.project_ray_normal(mouse_pos)
-			var ray_end = ray_origin + ray_direction * 1000
-
-			var query = PhysicsRayQueryParameters3D.create(ray_origin, ray_end)
-			var result = get_world_3d().direct_space_state.intersect_ray(query)
-			
-			if result.collider is CharacterBody3D:
-				target = result.collider
-			
-			if result:
-				navigation_agent_3d.set_target_position(result.position)
-
-		if navigation_agent_3d.is_navigation_finished():
-			velocity = Vector3.ZERO
-			target = null
-			
-			if animation_player.current_animation != "zombie_02_Idle":
-				animation_player.play("zombie_02_Idle")
-			
-			move_and_slide()
-			return
-			
-		if target:
-			navigation_agent_3d.set_target_position(target.global_position)
-			
-		var destination = navigation_agent_3d.get_next_path_position()
-		var local_destination = destination - global_position
-		local_destination.y = 0
-
-		var direction = local_destination.normalized()
-		velocity = direction * run_speed
-	
-	
-		if direction.length() > 0:
-			visuals.look_at(global_position + direction, Vector3.UP)
-			visuals.rotate_y(PI)
-
-		if animation_player.current_animation != "zombie_02_Run":
-			animation_player.play("zombie_02_Run")
-
-		move_and_slide()
-		
-
+				move_and_slide()
 
 func _on_navigation_agent_3d_navigation_finished() -> void:
-	print("ok")
 	velocity = Vector3.ZERO # Replace with function body.
 
 

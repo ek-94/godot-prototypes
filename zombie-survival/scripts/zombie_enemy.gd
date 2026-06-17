@@ -49,7 +49,6 @@ func _physics_process(delta: float) -> void:
 		
 
 func _on_navigation_agent_3d_navigation_finished() -> void:
-	print("ok")
 	velocity = Vector3.ZERO # Replace with function body.
 
 
