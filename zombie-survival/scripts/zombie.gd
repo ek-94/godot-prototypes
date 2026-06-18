@@ -48,10 +48,6 @@ func _physics_process(delta: float) -> void:
 				velocity += get_gravity() * delta
 				move_and_slide()
 
-func _on_navigation_agent_3d_navigation_finished() -> void:
-	velocity = Vector3.ZERO # Replace with function body.
-
-
 func _on_timer_timeout() -> void:
 	pass
 	#turn_on_ragdoll() # Replace with function body.

@@ -4,6 +4,7 @@ func enter():
 	pass
 
 func physics_update(delta):
+	actor.navigation_agent_3d.set_target_position(actor.target.global_position)
 	var destination = actor.navigation_agent_3d.get_next_path_position()
 	var local_destination = destination - actor.global_position
 	local_destination.y = 0
@@ -19,7 +20,7 @@ func physics_update(delta):
 	if actor.animation_player.current_animation != "zombie_02_Run":
 		actor.animation_player.play("zombie_02_Run")
 		
-	if actor.navigation_agent_3d.is_navigation_finished():
-		state_machine.change_state("Idle")
+	#if actor.navigation_agent_3d.is_navigation_finished():
+		#state_machine.change_state("Idle")
 
 	actor.move_and_slide()

@@ -14,6 +14,7 @@ extends CharacterBody3D
 @export var run_speed = 3
 var is_attacking = false
 var health = 100
+var target
 
 func _ready():
 	navigation_agent_3d.set_target_position(randomPos())
