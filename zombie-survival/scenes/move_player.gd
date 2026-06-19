@@ -16,8 +16,8 @@ func physics_update(delta):
 		actor.visuals.look_at(actor.global_position + direction, Vector3.UP)
 		actor.visuals.rotate_y(PI)
 
-	if actor.animation_player.current_animation != "zombie_02_Run":
-		actor.animation_player.play("zombie_02_Run")
+	if actor.animation_player.current_animation != "erika_run":
+		actor.animation_player.play("erika_run")
 		
 	if actor.navigation_agent_3d.is_navigation_finished():
 		state_machine.change_state("Idle")
