@@ -89,7 +89,7 @@ target_position = Vector3(0, 0, -100)
 
 [node name="raycast_mouse" type="RayCast3D" parent="CameraMount/yaw_pivot/pitch_pivot/Camera3D" unique_id=1959634429]
 
-[node name="zombie" parent="." unique_id=441396500 instance=ExtResource("2_rwgxs")]
+[node name="player" parent="." unique_id=441396500 instance=ExtResource("2_rwgxs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4182129, 0, -0.007750988)
 
 [node name="zombie2" parent="." unique_id=785021093 instance=ExtResource("3_4wyf3")]

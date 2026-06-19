@@ -6,7 +6,7 @@ func enter():
 
 func physics_update(delta):
 	if actor.navigation_agent_3d.is_navigation_finished():
-			actor.navigation_agent_3d.set_target_position(actor.randomPos())
+			actor.state_machine.change_state("Follow")
 			
 	var destination = actor.navigation_agent_3d.get_next_path_position()
 	var local_destination = destination - actor.global_position

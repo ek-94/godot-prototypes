@@ -1,10 +1,11 @@
 extends CharacterBody3D
 
 @onready var camera = get_parent().find_child("Camera3D")
-@onready var player = get_parent().find_child("zombie")
+@onready var player = get_parent().find_child("player")
 @onready var collision: CollisionShape3D = $CollisionShape3D
 @onready var mouse_ray : RayCast3D = camera.find_child("raycast_mouse")
 @onready var navigation_agent_3d: NavigationAgent3D = $NavigationAgent3D
+@onready var state_machine: Node = $StateMachine
 @onready var animation_player: AnimationPlayer = $visuals/Sketchfab_Scene/AnimationPlayer
 @onready var visuals: Node3D = $visuals
 @onready var physical_bone_simulator_3d: PhysicalBoneSimulator3D = $visuals/Sketchfab_Scene/Sketchfab_model/fbx_merge_fbx/Object_2/RootNode/Root/Object_5/Skeleton3D/PhysicalBoneSimulator3D
@@ -19,6 +20,7 @@ var target
 func _ready():
 	navigation_agent_3d.set_target_position(randomPos())
 	navigation_agent_3d.target_desired_distance = 0.05
+	target = player
 
 func attack():
 	is_attacking = true
