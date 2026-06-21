@@ -9,7 +9,9 @@
 [ext_resource type="Animation" uid="uid://civ132ycfews7" path="res://erika_sprint.res" id="5_3v2ag"]
 [ext_resource type="Script" uid="uid://b2u70t2b1dkbt" path="res://scenes/rts_controller.gd" id="5_fjrip"]
 [ext_resource type="Script" uid="uid://dik2mpy3ta62o" path="res://scenes/player_idle.gd" id="5_tuyoq"]
+[ext_resource type="Animation" uid="uid://d0vel5sq2sv0n" path="res://shoot_arrow.res" id="6_3v2ag"]
 [ext_resource type="Script" uid="uid://cqnjy5r1pajrl" path="res://scenes/follow.gd" id="7_fjrip"]
+[ext_resource type="Script" uid="uid://bi3rjo5qxyq3i" path="res://scenes/shoot_arrow.gd" id="12_jej6c"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_httt1"]
 radius = 0.34521484
@@ -645,7 +647,8 @@ _data = {
 &"erika_idle": ExtResource("3_y4r1p"),
 &"erika_run": ExtResource("4_d2wvv"),
 &"erika_sprint": ExtResource("5_3v2ag"),
-&"mixamo_com": SubResource("Animation_f1ej7")
+&"mixamo_com": SubResource("Animation_f1ej7"),
+&"shoot_arrow": ExtResource("6_3v2ag")
 }
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_httt1"]
@@ -741,6 +744,9 @@ script = ExtResource("5_tuyoq")
 
 [node name="Follow" type="Node" parent="StateMachine" unique_id=812640232]
 script = ExtResource("7_fjrip")
+
+[node name="ShootArrow" type="Node" parent="StateMachine" unique_id=1127372668]
+script = ExtResource("12_jej6c")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 
