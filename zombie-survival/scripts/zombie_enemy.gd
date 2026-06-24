@@ -11,13 +11,18 @@ extends CharacterBody3D
 @onready var physical_bone_simulator_3d: PhysicalBoneSimulator3D = $visuals/Sketchfab_Scene/Sketchfab_model/fbx_merge_fbx/Object_2/RootNode/Root/Object_5/Skeleton3D/PhysicalBoneSimulator3D
 @onready var attack_hitbox: Area3D = $attack_hitbox
 @onready var health_bar: ProgressBar = $ProgressBar
-
+@onready var wander_timer: Timer = $WanderTimer
 @export var run_speed = 3
+
+var spawn_location: Vector3
 var is_attacking = false
 var health = 100
+var wander_radius = 10
+var target_position: Vector3
 var target
 
 func _ready():
+	spawn_location = global_position
 	navigation_agent_3d.set_target_position(randomPos())
 	navigation_agent_3d.target_desired_distance = 0.05
 	target = player
@@ -42,6 +47,19 @@ func randomPos():
 		randi_range(-10, 10),
 		global_position.y,
 		randi_range(-10, 10)
+	)
+
+func pick_new_target():
+	var angle = randf() * TAU
+	var distance = randf() * wander_radius
+	
+	if animation_player.current_animation != "zombie_02_Run":
+		animation_player.play("zombie_02_Run")
+
+	target_position = spawn_location + Vector3(
+		cos(angle) * distance,
+		0,
+		sin(angle) * distance
 	)
 	
 func _physics_process(delta: float) -> void:
@@ -68,3 +86,8 @@ func deal_damage(dmg):
 	for body in bodies:
 		if body is CharacterBody3D:
 			body.take_damage(dmg)
+
+
+func _on_wander_timer_timeout() -> void:
+	print("Timeout")
+	pick_new_target() # Replace with function body.

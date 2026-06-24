@@ -10,10 +10,7 @@ func _ready():
 	for child in get_children():
 		child.actor = actor
 	
-	for child in get_children():
-		print(child.name)
-	
-	current_state = $Idle
+	current_state = $Wander
 	current_state.enter()
 
 func change_state(new_state_name: String):
