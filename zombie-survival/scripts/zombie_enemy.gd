@@ -16,6 +16,7 @@ extends CharacterBody3D
 
 var spawn_location: Vector3
 var is_attacking = false
+var is_dead = false
 var health = 100
 var wander_radius = 10
 var target_position: Vector3
