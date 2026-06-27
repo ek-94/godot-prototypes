@@ -1,6 +1,7 @@
 extends CharacterBody3D
 
 @onready var camera = get_parent().find_child("Camera3D")
+@onready var arrow_scene = preload("res://scenes/arrow.tscn")
 @onready var state_machine: Node = $StateMachine
 @onready var player = get_parent().find_child("zombie")
 @onready var collision: CollisionShape3D = $CollisionShape3D
@@ -20,6 +21,17 @@ func _ready():
 	health_bar.value = health
 	navigation_agent_3d.target_desired_distance = 0.05
 
+func launch_arrow():
+	var arrow = arrow_scene.instantiate()
+	get_tree().current_scene.add_child(arrow)
+
+	arrow.global_position = global_position
+	arrow.global_position.y += 1.5
+	arrow.global_transform.basis = global_transform.basis
+
+	var direction = global_transform.basis.z
+	arrow.linear_velocity = direction * 30
+	
 func take_damage(dmg):
 	if health > 0:
 		health -= dmg

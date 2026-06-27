@@ -248,8 +248,15 @@ bind/69/name = &"mixamorig_arrow"
 bind/69/bone = -1
 bind/69/pose = Transform3D(1, 0.00040294594, 1.1661205e-05, -0.000402946, 1, 6.211842e-06, -1.16587e-05, -6.21654e-06, 1, -0.000420155, 1.67522e-08, 6.47916e-06)
 
-[node name="Erika_Archer_Eyes_Mesh2" type="MeshInstance3D" unique_id=587433305]
-visible = false
+[sub_resource type="SphereShape3D" id="SphereShape3D_23jat"]
+
+[node name="RigidBody3D" type="RigidBody3D" unique_id=1083888626]
+
+[node name="arrow" type="MeshInstance3D" parent="." unique_id=587433305]
 mesh = SubResource("ArrayMesh_m10i8")
 skin = SubResource("Skin_qa0jw")
 skeleton = NodePath("../Skeleton3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2101289926]
+shape = SubResource("SphereShape3D_23jat")
+disabled = true
