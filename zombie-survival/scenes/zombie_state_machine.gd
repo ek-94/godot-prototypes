@@ -10,7 +10,7 @@ func _ready():
 	for child in get_children():
 		child.actor = actor
 	
-	current_state = $Follow
+	current_state = $Idle
 	current_state.enter()
 
 func change_state(new_state_name: String):

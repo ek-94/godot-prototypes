@@ -13,8 +13,8 @@ func physics_update(delta):
 
 
 	if direction.length() > 0:
-		actor.visuals.look_at(actor.global_position + direction, Vector3.UP)
-		actor.visuals.rotate_y(PI)
+		actor.look_at(actor.global_position + direction, Vector3.UP)
+		actor.rotate_y(PI)
 
 	if actor.animation_player.current_animation != "erika_run":
 		actor.animation_player.play("erika_run")

@@ -88,7 +88,11 @@ func deal_damage(dmg):
 		if body is CharacterBody3D:
 			body.take_damage(dmg)
 
-
+func take_damage(dmg):
+	health -= dmg
+	if health <= 0:
+		state_machine.change_state("Dead")
+		
 func _on_wander_timer_timeout() -> void:
 	print("Timeout")
 	pick_new_target() # Replace with function body.

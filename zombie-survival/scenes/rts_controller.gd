@@ -22,7 +22,7 @@ func _physics_process(delta):
 			if result.collider is CharacterBody3D:
 				if result.collider != actor.target:
 					actor.target = result.collider
-					state_machine.change_state("Follow")
+					state_machine.change_state("ShootArrow")
 			else:
 				actor.navigation_agent_3d.set_target_position(result.position)
 				state_machine.change_state("Move")

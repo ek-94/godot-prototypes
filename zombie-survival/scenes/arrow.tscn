@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://b63qs13b80ku3"]
 
 [ext_resource type="Texture2D" uid="uid://cw7xvitj3e01s" path="res://assets/erika_5.png" id="1_23jat"]
+[ext_resource type="Script" uid="uid://bfe22yrmnlr7p" path="res://scenes/arrow.gd" id="1_q8ifc"]
 [ext_resource type="Texture2D" uid="uid://cnxgwqmrw6c14" path="res://assets/erika_6.png" id="2_q8ifc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3pte7"]
@@ -248,9 +249,15 @@ bind/69/name = &"mixamorig_arrow"
 bind/69/bone = -1
 bind/69/pose = Transform3D(1, 0.00040294594, 1.1661205e-05, -0.000402946, 1, 6.211842e-06, -1.16587e-05, -6.21654e-06, 1, -0.000420155, 1.67522e-08, 6.47916e-06)
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_23jat"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_q8ifc"]
+size = Vector3(0.062438965, 0.020645142, 0.9219971)
 
 [node name="RigidBody3D" type="RigidBody3D" unique_id=1083888626]
+collision_layer = 2
+collision_mask = 2
+contact_monitor = true
+max_contacts_reported = 1
+script = ExtResource("1_q8ifc")
 
 [node name="arrow" type="MeshInstance3D" parent="." unique_id=587433305]
 mesh = SubResource("ArrayMesh_m10i8")
@@ -258,5 +265,7 @@ skin = SubResource("Skin_qa0jw")
 skeleton = NodePath("../Skeleton3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2101289926]
-shape = SubResource("SphereShape3D_23jat")
-disabled = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.023345947, 0.0051498413, -0.039001465)
+shape = SubResource("BoxShape3D_q8ifc")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
