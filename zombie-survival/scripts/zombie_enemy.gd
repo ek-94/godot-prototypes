@@ -1,6 +1,7 @@
 extends CharacterBody3D
 
 @onready var camera = get_parent().find_child("Camera3D")
+@onready var blood_scene = preload("res://scenes/blood_particles.tscn")
 @onready var player = get_parent().find_child("player")
 @onready var collision: CollisionShape3D = $CollisionShape3D
 @onready var mouse_ray : RayCast3D = camera.find_child("raycast_mouse")
@@ -89,6 +90,12 @@ func deal_damage(dmg):
 			body.take_damage(dmg)
 
 func take_damage(dmg):
+	var blood_instance = blood_scene.instantiate()
+	blood_instance.global_position = global_position
+	get_tree().current_scene.add_child(blood_instance)
+	
+	blood_instance.global_position.y += 1
+	
 	health -= dmg
 	if health <= 0:
 		state_machine.change_state("Dead")
